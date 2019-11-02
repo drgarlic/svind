@@ -1,0 +1,54 @@
+@import "tailwindcss/base";
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";
+
+/* https://tailwindcss.com/docs/ */
+
+.base {
+    @apply antialiased;
+    @apply font-medium;
+    @apply font-sans;
+    @apply min-h-screen;
+    @apply text-blue-100;
+
+    background-color: rgb(29, 184, 206);
+}
+
+.title {
+    @apply font-bold;
+    @apply pb-4;
+    @apply text-3xl;
+}
+
+@screen md {
+    .title {
+        @apply text-4xl;
+    }
+}
+
+/* @screen lg {
+    .title {
+        @apply text-5xl;
+    }
+} */
+
+.btn {
+    @apply cursor-pointer;
+    @apply font-bold;
+    @apply px-4;
+    @apply py-2;
+    @apply rounded-lg;
+}
+
+.btn-blue {
+    @apply btn;
+    @apply bg-teal-600;
+    @apply text-white;
+}
+
+.btn-blue:hover {
+    @apply bg-teal-700;
+}
+
