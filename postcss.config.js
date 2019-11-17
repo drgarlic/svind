@@ -12,9 +12,6 @@ module.exports = {
     autoprefixer,
 
     production &&
-      cssnano({
-        preset: 'default',
-      }),
       purgecss({
         content: [
           './**/*.html',
@@ -30,6 +27,9 @@ module.exports = {
           });
           return res;
         }
+      }),
+      cssnano({
+        preset: 'default',
       })
   ]
 };
