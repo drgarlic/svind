@@ -16,24 +16,6 @@
     background-color: rgb(29, 184, 206);
 }
 
-.title {
-    @apply font-bold;
-    @apply pb-4;
-    @apply text-3xl;
-}
-
-@screen md {
-    .title {
-        @apply text-4xl;
-    }
-}
-
-/* @screen lg {
-    .title {
-        @apply text-5xl;
-    }
-} */
-
 .btn {
     @apply cursor-pointer;
     @apply font-bold;
@@ -52,3 +34,14 @@
     @apply bg-teal-700;
 }
 
+.title {
+    @apply font-bold;
+    @apply pb-4;
+    @apply text-3xl;
+}
+
+@screen md {
+    .title {
+        @apply text-4xl;
+    }
+}

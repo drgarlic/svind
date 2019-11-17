@@ -1,3 +1,17 @@
+# ---
+# Apple
+# ---
+
 .DS_Store
+
+# ---
+# Node
+# ---
+
 node_modules
+
+# ---
+# Production
+# ---
+
 public/bundle.*

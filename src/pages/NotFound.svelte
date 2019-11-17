@@ -1,9 +1,9 @@
 <script>
-    import Button from '@/components/Button';
-    import Page from '@/templates/Page';
+    import Button from 'src/components/ButtonLink';
+    import Page from 'src/templates/Page';
 </script>
 
-<Page title="Hmm.. ya lost ?">
+<Page title="Hmm.. y'a lost ?">
     <Button
         name="Take me home"
         url="/"

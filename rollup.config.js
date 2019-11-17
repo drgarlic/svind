@@ -4,7 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
-import alias from 'rollup-plugin-alias';
+import alias from '@rollup/plugin-alias';
 
 const production = ! process.env.ROLLUP_WATCH;
 
@@ -18,6 +18,9 @@ export default {
     },
     plugins: [
         alias({
+            entries: {
+                'src': `${__dirname}/src`
+            },
             resolve: [
                 '.js',
                 '.svelte',
@@ -25,9 +28,6 @@ export default {
                 '/index.svelte',
                 ''
             ],
-            entries: {
-                '@': `${__dirname}/src`,
-            }
         }),
 
         postcss({
