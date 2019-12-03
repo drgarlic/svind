@@ -9,7 +9,7 @@ import alias from '@rollup/plugin-alias';
 const production = ! process.env.ROLLUP_WATCH;
 
 export default {
-    input: 'src/js/main.js',
+    input: 'src/main.js',
     output: {
         sourcemap: true,
         format: 'iife',
@@ -22,10 +22,6 @@ export default {
                 'src': `${__dirname}/src`
             },
             resolve: [
-                '.js',
-                '.svelte',
-                '/index.js',
-                '/index.svelte',
                 ''
             ],
         }),

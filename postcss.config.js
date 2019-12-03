@@ -11,25 +11,25 @@ module.exports = {
     tailwindcss,
     autoprefixer,
 
-    production &&
-      purgecss({
-        content: [
-          './**/*.html',
-          './**/*.svelte'
-        ],
-        defaultExtractor: (content) => {
-          const matches = content.match(/[A-Za-z0-9-_:/]+/g) || [];
-          const res = matches.map(match => {
-            if (match.startsWith('class:')) {
-              return match.substr(6);
-            }
-            return match;
-          });
-          return res;
-        }
-      }),
-      cssnano({
-        preset: 'default',
-      })
+    production && purgecss({
+      content: [
+        './**/*.html',
+        './**/*.svelte'
+      ],
+      defaultExtractor: (content) => {
+        const matches = content.match(/[A-Za-z0-9-_:/]+/g) || [];
+        const res = matches.map(match => {
+          if (match.startsWith('class:')) {
+            return match.substr(6);
+          }
+          return match;
+        });
+        return res;
+      }
+    }),
+
+    production && cssnano({
+      preset: 'default',
+    })
   ]
 };

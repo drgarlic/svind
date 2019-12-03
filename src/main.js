@@ -1,4 +1,4 @@
-import App from 'src/router/App';
+import App from 'src/App.svelte';
 
 import 'src/css/main.css';
 

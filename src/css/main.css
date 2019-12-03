@@ -12,8 +12,7 @@
     @apply font-sans;
     @apply min-h-screen;
     @apply text-blue-100;
-
-    background-color: rgb(29, 184, 206);
+    background-color: #1db9ce;
 }
 
 .btn {
@@ -22,20 +21,16 @@
     @apply px-4;
     @apply py-2;
     @apply rounded-lg;
-}
-
-.btn-blue {
-    @apply btn;
     @apply bg-teal-600;
     @apply text-white;
 }
 
-.btn-blue:hover {
+.btn:hover {
     @apply bg-teal-700;
 }
 
 .title {
-    @apply font-bold;
+    @apply font-black;
     @apply pb-4;
     @apply text-3xl;
 }

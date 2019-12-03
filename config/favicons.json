@@ -1,0 +1,29 @@
+{
+    "path": "/icons/",
+
+    "appName": "svind",
+    "appShortName": "svind",
+    "appDescription": "description",
+
+    "background": "#1db9ce",
+    "theme_color": "#1db9ce",
+
+    "start_url": "/",
+    "display": "minimal-ui",
+
+    "logging": false,
+    "html": "icons.html",
+    "pipeHTML": true,
+    "replace": true,
+
+    "icons": {
+        "android": { "offset": 5 },
+        "appleIcon": { "offset": 5 },
+        "appleStartup": false,
+        "coast": false,
+        "favicons": { "offset": 5 },
+        "firefox": false,
+        "windows": false,
+        "yandex": false
+    }
+}

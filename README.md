@@ -30,10 +30,16 @@ yarn build
 yarn start
 ```
 
-### Deploy
+### Deploy (now)
 
-#### Now
+#### Dev
 
 ```bash
 yarn deploy
+```
+
+#### Prod
+
+```bash
+yarn deploy:prod
 ```

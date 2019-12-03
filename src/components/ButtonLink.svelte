@@ -9,7 +9,7 @@
     href={url}
     use:link
     class="
-    btn-blue
+    btn
 ">
     { name }
 </a>

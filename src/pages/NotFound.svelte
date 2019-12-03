@@ -1,6 +1,6 @@
 <script>
-    import Button from 'src/components/ButtonLink';
-    import Page from 'src/templates/Page';
+    import Button from 'src/components/ButtonLink.svelte';
+    import Page from 'src/templates/Page.svelte';
 </script>
 
 <Page title="Hmm.. y'a lost ?">
