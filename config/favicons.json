@@ -7,6 +7,7 @@
 
     "background": "#1db9ce",
     "theme_color": "#1db9ce",
+    "appleStatusBarStyle": "black-translucent",
 
     "start_url": "/",
     "display": "standalone",
