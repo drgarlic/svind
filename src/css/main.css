@@ -6,7 +6,7 @@
 
 /* https://tailwindcss.com/docs/ */
 
-.base {
+body {
     @apply antialiased;
     @apply font-medium;
     @apply font-sans;
