@@ -4,7 +4,7 @@
   "description": "description",
   "dir": "auto",
   "lang": "en-US",
-  "display": "minimal-ui",
+  "display": "standalone",
   "orientation": "any",
   "start_url": "/",
   "background_color": "#1db9ce",

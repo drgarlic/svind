@@ -9,7 +9,7 @@
     "theme_color": "#1db9ce",
 
     "start_url": "/",
-    "display": "minimal-ui",
+    "display": "standalone",
 
     "logging": false,
     "html": "icons.html",
