@@ -20,11 +20,11 @@
     "icons": {
         "android": { "offset": 5 },
         "appleIcon": { "offset": 5 },
-        "appleStartup": false,
+        "appleStartup": { "offset": 20 },
         "coast": false,
         "favicons": { "offset": 5 },
-        "firefox": false,
-        "windows": false,
+        "firefox": { "offset": 5 },
+        "windows": { "offset": 5 },
         "yandex": false
     }
 }
