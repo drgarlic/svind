@@ -1,42 +1,52 @@
 import del from 'del';
 import favicons from 'favicons';
 import gulp from 'gulp';
+import imagemin from 'gulp-imagemin';
 import inject from 'gulp-inject';
-import log from 'fancy-log';
 
 import * as faviconsConfig from './config/favicons.json';
 
 const path = {
-    iconsFrom: 'src/assets/logo.svg',
-    iconsTo: 'public/icons',
-    index: 'public/index.html',
-    public: 'public',
+    faviconsFrom: 'src/assets/svg/logo.svg',
+    faviconsTo: `public${faviconsConfig.path}`,
 }
 
 export const clean = () => del([
-    path.iconsTo,
+    'public/assets',
 ]);
 
-export const genIcons = () => {
-    return gulp.src(path.iconsFrom)
+export const copyAssets = () => {
+    return gulp.src([ 'src/assets/**/*' ])
+        .pipe(gulp.dest('public/assets'));
+}
+
+export const genFavicons = () => {
+    return gulp.src(path.faviconsFrom)
         .pipe(favicons.stream(faviconsConfig))
-        .on('error', log)
-        .pipe(gulp.dest(path.iconsTo));
+        .pipe(gulp.dest(path.faviconsTo));
 };
 
-export const injectIcons = () => {
-    return gulp.src(path.index)
-        .pipe(inject(gulp.src([`${path.iconsTo}/${faviconsConfig.html}`]), {
-            starttag: '<!-- inject:icons -->',
+export const injectFavicons = () => {
+    return gulp.src('public/index.html')
+        .pipe(inject(gulp.src([`${path.faviconsTo}${faviconsConfig.html}`]), {
+            starttag: '<!-- inject:favicons -->',
             transform: (filepath, file) => {
                 return file.contents.toString();
             }
         }))
-        .pipe(gulp.dest(path.public));
+        .pipe(gulp.dest('public'));
+}
+
+export const optimizeImages = () => {
+    return gulp.src('public/**/*.+(jpeg|jpg|png|gif|svg)')
+        .pipe(imagemin())
+        .pipe(gulp.dest('public'));
 }
 
 export default gulp.series(
     clean,
-    genIcons,
-    injectIcons,
+    copyAssets,
+    genFavicons,
+    injectFavicons,
+    optimizeImages,
 );
