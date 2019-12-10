@@ -14,4 +14,11 @@ node_modules
 # Production
 # ---
 
+public/assets
 public/bundle.*
+
+# ---
+# Yarn
+# ---
+
+yarn-error.log

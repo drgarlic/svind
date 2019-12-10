@@ -23,6 +23,7 @@ body {
     @apply rounded-lg;
     @apply bg-teal-600;
     @apply text-white;
+    @apply select-none;
 }
 
 .btn:hover {
