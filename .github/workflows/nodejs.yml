@@ -21,5 +21,7 @@ jobs:
       run: |
         yarn install
         yarn build
+        yarn gulp
+        yarn test
       env:
         CI: true
