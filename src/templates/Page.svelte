@@ -27,7 +27,12 @@
             alt="octopus"
         >
         
-        <h1 class="title">
+        <h1 class="
+            font-black
+            pb-4
+            text-3xl
+            md:text-4xl
+        ">
             {title}
         </h1>
         <slot></slot>
