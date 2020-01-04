@@ -1,7 +1,9 @@
 module.exports = {
     "env": {
         "browser": true,
+        "cypress/globals": true,
         "es6": true,
+        "jest": true,
         "node": true
     },
     "extends": "eslint:recommended",
@@ -14,11 +16,13 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
+        "cypress",
+        "jest",
         "svelte3"
     ],
     "overrides": [
         {
-            "files": [ '**/*.svelte' ],
+            "files": [ "**/*.svelte" ],
             "processor": "svelte3/svelte3"
         }
     ],

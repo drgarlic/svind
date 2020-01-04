@@ -7,5 +7,10 @@
     <Button
         name="Get current date ⏰"
         url="/date"
+        class="mb-2"
+    />
+    <Button
+        name="Checkout the repository"
+        url="https://github.com/gawlk/svind"
     />
 </Page>

@@ -1,8 +1,23 @@
 # ---
+# Cypress
+# ---
+
+cypress/**/*example*
+cypress/plugins
+cypress/support
+
+# ---
+# Jest
+# ---
+
+coverage
+
+# ---
 # Mac OS
 # ---
 
 .DS_Store
+* 2*
 
 # ---
 # Node
@@ -14,7 +29,6 @@ node_modules
 # Production
 # ---
 
-public/assets
 public/bundle.*
 
 # ---
