@@ -4,9 +4,12 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import postcss from 'rollup-plugin-postcss';
 import { terser } from 'rollup-plugin-terser';
+
 import alias from '@rollup/plugin-alias';
+import replace from '@rollup/plugin-replace';
 
 const production = ! process.env.ROLLUP_WATCH;
+const mode = production ? 'production' : 'development';
 
 export default {
     input: 'src/main.js',
@@ -28,6 +31,11 @@ export default {
 
         postcss({
             extract: 'public/bundle.tailwind.css'
+        }),
+
+        replace({
+            'process.browser': true,
+            'process.env.NODE_ENV': JSON.stringify(mode),
         }),
 
         svelte({
