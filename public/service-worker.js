@@ -10,13 +10,16 @@ const filesToCache = [
 
 console.log(`[Service Worker] Origin: ${self.location.origin}`);
 
+const regexesCacheFirst = [
+    self.location.origin,
+];
+
 const regexesOnlineFirst = [
     self.location.origin + '/api/',
     'localhost',
 ];
 
-const regexesCacheFirst = [
-    self.location.origin,
+const regexesOnlineOnly = [
 ];
 
 self.addEventListener('install', (event) => {
@@ -69,9 +72,19 @@ const onlineFirst = (event, cache) => {
     return update(event, cache);
 };
 
+const onlineOnly = (event) => {
+    console.log(`[Service Worker] Online only: ${event.request.url}`);
+    return fetch(event.request);
+};
+
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cache) => {
+            for (const regex of regexesOnlineOnly) {
+                if (new RegExp(regex).test(event.request.url)) {
+                    return onlineOnly(event);
+                }
+            }
             for (const regex of regexesOnlineFirst) {
                 if (RegExp(regex).test(event.request.url)) {
                     return onlineFirst(event, cache);
