@@ -44,7 +44,7 @@ yarn prod
 yarn test:unit
 ```
 
-or in watch mode:
+or in watch mode
 
 ```bash
 yarn test:unit:watch
@@ -74,7 +74,9 @@ yarn test:size
 yarn test:ui
 ```
 
-#### All (unit, coverage, lint, size)
+#### All
+
+Will run: unit, coverage, lint, size tests
 
 ```bash
 yarn test
@@ -88,7 +90,7 @@ yarn test
 yarn now
 ```
 
-or in prod mode:
+or in prod mode
 
 ```bash
 yarn now:prod

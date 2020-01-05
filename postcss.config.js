@@ -13,18 +13,16 @@ module.exports = {
 
     production && purgecss({
       content: [
-        './**/*.html',
-        './**/*.svelte'
+        './**/index.html',
+        './src/**/*.html',
+        './src/**/*.jsx',
+        './src/**/*.svelte',
+        './src/**/*.vue'
       ],
       defaultExtractor: (content) => {
-        const matches = content.match(/[A-Za-z0-9-_:/]+/g) || [];
-        const res = matches.map(match => {
-          if (match.startsWith('class:')) {
-            return match.substr(6);
-          }
-          return match;
-        });
-        return res;
+        const matches = content.match(/[\w-:/]+(?<!:)/g) || [];
+        // Special Svelte case when binding a class
+        return matches.map(match => match.startsWith('class:') ? match.substr(6) : match);
       }
     }),
 
