@@ -30,16 +30,78 @@ yarn build
 yarn start
 ```
 
-### Deploy (now)
-
-#### Dev
+or
 
 ```bash
-yarn deploy
+yarn prod
 ```
 
-#### Prod
+### Tests
+
+#### Unit
 
 ```bash
-yarn deploy:prod
+yarn test:unit
+```
+
+or in watch mode:
+
+```bash
+yarn test:unit:watch
+```
+
+#### Coverage
+
+```bash
+yarn test:unit:coverage
+```
+
+#### Lint
+
+```bash
+yarn test:lint
+```
+
+#### Size
+
+```bash
+yarn test:size
+```
+
+#### Cypress
+
+```bash
+yarn test:ui
+```
+
+#### All (unit, coverage, lint, size)
+
+```bash
+yarn test
+```
+
+### Now
+
+#### Deploy
+
+```bash
+yarn now
+```
+
+or in prod mode:
+
+```bash
+yarn now:prod
+```
+
+#### Local
+
+```bash
+yarn now:dev
+```
+
+### Gulp
+
+```bash
+yarn gulp
 ```
