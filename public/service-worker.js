@@ -14,6 +14,9 @@ const regexesCacheFirst = [
     self.location.origin,
 ];
 
+const regexesCacheOnly = [
+];
+
 const regexesOnlineFirst = [
     self.location.origin + '/api/',
     'localhost',
@@ -67,6 +70,11 @@ const cacheFirst = (event, cache) => {
     return cache || fun;
 };
 
+const cacheOnly = (event, cache) => {
+    console.log(`[Service Worker] Cache only: ${event.request.url}`);
+    return cache || update(event, cache);
+};
+
 const onlineFirst = (event, cache) => {
     console.log(`[Service Worker] Online first: ${event.request.url}`);
     return update(event, cache);
@@ -80,19 +88,24 @@ const onlineOnly = (event) => {
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cache) => {
-            for (const regex of regexesOnlineOnly) {
-                if (new RegExp(regex).test(event.request.url)) {
-                    return onlineOnly(event);
-                }
-            }
             for (const regex of regexesOnlineFirst) {
                 if (RegExp(regex).test(event.request.url)) {
                     return onlineFirst(event, cache);
                 }
             }
+            for (const regex of regexesOnlineOnly) {
+                if (new RegExp(regex).test(event.request.url)) {
+                    return onlineOnly(event);
+                }
+            }
             for (const regex of regexesCacheFirst) {
                 if (new RegExp(regex).test(event.request.url)) {
                     return cacheFirst(event, cache);
+                }
+            }
+            for (const regex of regexesCacheOnly) {
+                if (new RegExp(regex).test(event.request.url)) {
+                    return cacheOnly(event);
                 }
             }
             return onlineFirst(event, cache);

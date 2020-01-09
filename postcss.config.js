@@ -15,9 +15,7 @@ module.exports = {
       content: [
         './**/index.html',
         './src/**/*.html',
-        './src/**/*.jsx',
-        './src/**/*.svelte',
-        './src/**/*.vue'
+        './src/**/*.svelte'
       ],
       defaultExtractor: (content) => {
         const matches = content.match(/[\w-:/]+(?<!:)/g) || [];
