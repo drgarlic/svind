@@ -1,18 +1,14 @@
 html {
     font-size: 14px;
+    @apply antialiased;
+    @apply font-medium;
+    @apply min-h-screen;
+    @apply text-blue-100;
+    background-color: #1db9ce;
 }
 
 @media (min-width: 420px) {
     html {
         font-size: 16px;
     }
-}
-
-body {
-    @apply antialiased;
-    @apply font-medium;
-    @apply font-sans;
-    @apply min-h-screen;
-    @apply text-blue-100;
-    background-color: #1db9ce;
 }
