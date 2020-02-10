@@ -9,17 +9,17 @@
     export let url;
 
     const defaultClasses = `
-    cursor-pointer
-    font-bold
-    px-4
-    py-2
-    rounded-lg
-    bg-teal-600
-    text-white
-    select-none
-    shadow-inner
-    hover:bg-teal-700
-    focus:shadow-none
+        cursor-pointer
+        font-bold
+        px-4
+        py-2
+        rounded-lg
+        bg-teal-600
+        text-white
+        select-none
+        shadow-inner
+        hover:bg-teal-700
+        focus:shadow-none
     `
 </script>
 

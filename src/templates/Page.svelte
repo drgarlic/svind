@@ -11,30 +11,40 @@
     {/if}
 </svelte:head>
 
-<div class="
-    container
-    mx-auto
-    px-4
-    py-2
+<div
+    style="background-color: #1db9ce"
+    class="
+    font-medium
+    min-h-screen
+    max-width
+    text-blue-100
 ">
-    <div class="
-        flex
-        flex-col
-        items-center
+    <div
+        class="
+        container
+        mx-auto
+        px-4
+        py-2
     ">
-        <img
-            src="https://media.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif"
-            alt="octopus"
-        >
-        
-        <h1 class="
-            font-black
-            pb-4
-            text-3xl
-            md:text-4xl
+        <div class="
+            flex
+            flex-col
+            items-center
         ">
-            {title}
-        </h1>
-        <slot></slot>
+            <img
+                src="https://media.giphy.com/media/WwMHQqMG0yirepFPP8/giphy.gif"
+                alt="octopus"
+            >
+            
+            <h1 class="
+                font-black
+                pb-4
+                text-3xl
+                md:text-4xl
+            ">
+                {title}
+            </h1>
+            <slot></slot>
+        </div>
     </div>
 </div>
