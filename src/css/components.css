@@ -16,18 +16,3 @@ body {
     @apply text-blue-100;
     background-color: #1db9ce;
 }
-
-.btn {
-    @apply cursor-pointer;
-    @apply font-bold;
-    @apply px-4;
-    @apply py-2;
-    @apply rounded-lg;
-    @apply bg-teal-600;
-    @apply text-white;
-    @apply select-none;
-}
-
-.btn:hover {
-    @apply bg-teal-700;
-}
