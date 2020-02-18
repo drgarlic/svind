@@ -21,7 +21,7 @@
     "eslint-plugin-cypress": "^2.8.1",
     "eslint-plugin-jest": "^23.3.0",
     "eslint-plugin-svelte3": "^2.7.3",
-    "favicons": "^5.5.0",
+    "favicons": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-inject": "^5.0.4",
