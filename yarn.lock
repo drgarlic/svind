@@ -1381,25 +1381,25 @@
   dependencies:
     type-detect "4.0.8"
 
-"@size-limit/file@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.0.1.tgz#9d98a529d7856d0e666dc0d87a091dbfd1779023"
-  integrity sha512-0IribiiEXz7WkX8oJdmXLn1XXpvOYZgDld0Db+o4EZjigdopfDqSzH3Jkef0MpNRERtfi0DCZR1/dSe2o6jN3g==
+"@size-limit/file@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.0.2.tgz#062576ca01dadfb7c1ce1bd26d585374d19df242"
+  integrity sha512-+ggddIGbyhF/mmZJgGnUCDOaL+aMo+3qGSmE9De4vd+/1eSss4S/JPO1SGxdnGlfPPWxK55/Mhy8qa70TEDygA==
   dependencies:
-    semver "7.1.2"
+    semver "7.1.3"
 
-"@size-limit/preset-app@^4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.0.1.tgz#c0537a54b31f6d2ee2235c86bfe646c5480b91bd"
-  integrity sha512-DDDM7VGzs8yp56puZEp5UDdSTDK3UOBtixGb1ZT/7lMUSohS/1XW1ieDxGUYIV0Gh3lN/S4U0iuxE9WLV4FfqA==
+"@size-limit/preset-app@^4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.0.2.tgz#10f61aa442a8cb89224538cb62b41d90424c99ac"
+  integrity sha512-SYmcfo/rjPDL8z60SFBrjIsqZtFle1guC+QMvoA5iaKcmT0/B4d8Agsok1zdIN6oFrCIlUgqKqRCl9K5wk453w==
   dependencies:
-    "@size-limit/file" "4.0.1"
-    "@size-limit/time" "4.0.1"
+    "@size-limit/file" "4.0.2"
+    "@size-limit/time" "4.0.2"
 
-"@size-limit/time@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.0.1.tgz#03938d84be6dcc6f2a92e5e2c8764f19bf9a2a72"
-  integrity sha512-XAO79MgBNBagZ0Eu9lZprCgphRY+2P2sAt+yf1+punnAZJ8ZnzfUzaPN2qf4qJPiNFobRwoVTbZASr6+QQWacw==
+"@size-limit/time@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.0.2.tgz#c668697edd2774757d25367630b866ab6dc663f9"
+  integrity sha512-Mjo1B0TJz3xVD63d78Ct4Y4z4zKjpynmuqIkzW36CCmHWfUowlCfGooUKe4KVxymTrR7LPd967gCyKBcNau+dg==
   dependencies:
     estimo "^2.0.1"
     react "^16.12.0"
@@ -2568,10 +2568,10 @@ ci-info@^2.0.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-ci-job-number@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-0.3.1.tgz#4354e45bb3ed5a7301f09358d2876d510d4a570e"
-  integrity sha512-OfY2Cg+mTqZz7lWOxONGbAXVZNNWPSiyGtOpAjYHEVTXIae8lGCOg3cDfJpPh8zcl+2CqItOsxbvH6ueV+QOmw==
+ci-job-number@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-1.0.0.tgz#383b9bff6065bb2e4ad0a68ba09fbc8d6ee25e29"
+  integrity sha512-w6+qJ7Rx/N9jdDrxhQmoSWxoD7fjk0urZEq1e3TgdEsExE/tZ2vwhjq0D3q7Fw3fbp+Tu6DfJBkfhjPzKS9+Yg==
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -9061,20 +9061,20 @@ semver@7.0.0:
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.0.0.tgz#5f3ca35761e47e05b206c6daff2cf814f0316b8e"
   integrity sha512-+GB6zVA9LWh6zovYQLALHwv5rb2PHGlJi3lfiqIHxR0uuwCgefcOJc59v9fv1w8GbStwxuuqqAjI9NMAOOgq1A==
 
-semver@7.1.2, semver@^7.1.1:
-  version "7.1.2"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.2.tgz#847bae5bce68c5d08889824f02667199b70e3d87"
-  integrity sha512-BJs9T/H8sEVHbeigqzIEo57Iu/3DG6c4QoqTfbQB3BPA4zgzAomh/Fk9E7QtjWQ8mx2dgA9YCfSF4y9k9bHNpQ==
+semver@7.1.3, semver@^7.1.3:
+  version "7.1.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.3.tgz#e4345ce73071c53f336445cfc19efb1c311df2a6"
+  integrity sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA==
 
 semver@^6.0.0, semver@^6.1.2, semver@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.0.tgz#ee0a64c8af5e8ceea67687b133761e1becbd1d3d"
   integrity sha512-b39TBaTSfV6yBrapU89p5fKekE2m/NwnDocOVruQFS1/veMgdzuPcnOM34M6CwxW8jH/lxEa5rBoDeUwu5HHTw==
 
-semver@^7.1.3:
-  version "7.1.3"
-  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.3.tgz#e4345ce73071c53f336445cfc19efb1c311df2a6"
-  integrity sha512-ekM0zfiA9SCBlsKa2X1hxyxiI4L3B6EbVJkkdgQXnSEEaHlGdvyodMruTiulSRWMMB4NeIuYNMC9rTKTz97GxA==
+semver@^7.1.1:
+  version "7.1.2"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.1.2.tgz#847bae5bce68c5d08889824f02667199b70e3d87"
+  integrity sha512-BJs9T/H8sEVHbeigqzIEo57Iu/3DG6c4QoqTfbQB3BPA4zgzAomh/Fk9E7QtjWQ8mx2dgA9YCfSF4y9k9bHNpQ==
 
 "serialize-javascript@>= 2.1.2", serialize-javascript@^2.1.2:
   version "2.1.2"
@@ -9204,14 +9204,14 @@ sisteransi@^1.0.3:
   resolved "https://registry.yarnpkg.com/sisteransi/-/sisteransi-1.0.4.tgz#386713f1ef688c7c0304dc4c0632898941cad2e3"
   integrity sha512-/ekMoM4NJ59ivGSfKapeG+FWtrmWvA1p6FBZwXrqojw90vJu8lBmrTxCMuBCydKtkaUe2zt4PlxeTKpjwMbyig==
 
-size-limit@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.0.1.tgz#7e001ea7f113a25a0d863ac2dac4b3f81269242f"
-  integrity sha512-UwXXuMeyoUx3BbCBdsnSEQFg4G4yj0ViItvFCq46LOWbDQOXJU8rx7LwQEbu9lte7fDHQy+BkZS8PxKNXbju9A==
+size-limit@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.0.2.tgz#fad45d0a99c55fc443903666c1bda601417508cc"
+  integrity sha512-Pk6Ckqio81mUq/D88nRG9EqmMRS8GIuQU3dayVFQtFw9a8Q+HZ9XKZmZTE8tHsKXtXviaVxuRF98vkuBQctxbg==
   dependencies:
     bytes "^3.1.0"
     chalk "^3.0.0"
-    ci-job-number "^0.3.1"
+    ci-job-number "^1.0.0"
     cosmiconfig "^6.0.0"
     globby "^11.0.0"
     read-pkg-up "^7.0.1"
