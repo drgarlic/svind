@@ -4,7 +4,7 @@
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.7.4",
-    "@babel/preset-env": "^7.7.4",
+    "@babel/preset-env": "^7.8.6",
     "@babel/register": "^7.8.6",
     "@fullhuman/postcss-purgecss": "^2.1.0",
     "@rollup/plugin-alias": "^3.0.1",
