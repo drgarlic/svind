@@ -10,6 +10,9 @@ jobs:
     strategy:
       matrix:
         node-version: [10.x, 12.x]
+    
+    env:
+      CI: true
 
     steps:
     - uses: actions/checkout@v1
@@ -17,11 +20,20 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: yarn install, build, and test
-      run: |
-        yarn install
-        yarn build
-        yarn gulp
-        yarn test
-      env:
-        CI: true
+    - name: Install
+      run: yarn install
+    - name: Build
+      run: yarn build
+    - name: Gulp test
+      run: yarn gulp
+    - name: Unit tests
+      run: yarn test:unit
+    - name: Coverage test
+      run: yarn test:unit:coverage
+    - name: Lint test
+      run: yarn test:lint
+    - name: Size test
+      run: yarn test:size
+    - name: Audit test
+      run: yarn test:audit
+  
