@@ -13,12 +13,12 @@ module.exports = {
 
     production && purgecss({
       content: [
-        './**/index.html',
+        './public/**/*.html',
         './src/**/*.html',
         './src/**/*.svelte'
       ],
       defaultExtractor: (content) => {
-        const matches = content.match(/[\w-:/]+(?<!:)/g) || [];
+        const matches = content.match(/[\w-/.:]+(?<!:)/g) || [];
         // Special Svelte case when binding a class
         return matches.map(match => match.startsWith('class:') ? match.substr(6) : match);
       }

@@ -3,6 +3,7 @@ import favicons from 'favicons';
 import gulp from 'gulp';
 import imagemin from 'gulp-imagemin';
 import inject from 'gulp-inject';
+import webp from 'gulp-webp';
 
 import * as faviconsConfig from './config/favicons.json';
 
@@ -16,7 +17,15 @@ export const clean = () => del([
 ]);
 
 export const copyAssets = () => {
-    return gulp.src([ 'src/assets/**/*' ])
+    return gulp.src('src/assets/**/*')
+        .pipe(gulp.dest('public/assets'));
+}
+
+export const generateWebps = () => {
+    return gulp.src('public/assets/**/*')
+        .pipe(webp({
+            quality: 90,
+        }))
         .pipe(gulp.dest('public/assets'));
 }
 
@@ -46,6 +55,7 @@ export const optimizeImages = () => {
 export default gulp.series(
     clean,
     copyAssets,
+    generateWebps,
     genFavicons,
     injectFavicons,
     optimizeImages,
