@@ -43,7 +43,7 @@
     "sitemap": "^5.1.0",
     "size-limit": "^4.0.2",
     "svelte": "^3.19.1",
-    "svelte-jester": "^1.0.4",
+    "svelte-jester": "^1.0.5",
     "svelte-spa-router": "^2.0.0",
     "tailwindcss": "^1.2.0"
   },
