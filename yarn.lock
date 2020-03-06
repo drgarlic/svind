@@ -1339,28 +1339,28 @@
   dependencies:
     type-detect "4.0.8"
 
-"@size-limit/file@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.0.2.tgz#062576ca01dadfb7c1ce1bd26d585374d19df242"
-  integrity sha512-+ggddIGbyhF/mmZJgGnUCDOaL+aMo+3qGSmE9De4vd+/1eSss4S/JPO1SGxdnGlfPPWxK55/Mhy8qa70TEDygA==
+"@size-limit/file@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/file/-/file-4.1.1.tgz#17a7bc409ccb8cc0db42fa1ded500f4cf3b840c1"
+  integrity sha512-PKJ3Yr4Zhm7ZKd0akGPBP3XMrFOTOe4KVHtnQmFTMIzCgieZjEq+k83tVFrA4zWzNFh5tzY8T1Cg4ihv2Fi/QQ==
   dependencies:
     semver "7.1.3"
 
-"@size-limit/preset-app@^4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.0.2.tgz#10f61aa442a8cb89224538cb62b41d90424c99ac"
-  integrity sha512-SYmcfo/rjPDL8z60SFBrjIsqZtFle1guC+QMvoA5iaKcmT0/B4d8Agsok1zdIN6oFrCIlUgqKqRCl9K5wk453w==
+"@size-limit/preset-app@^4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/preset-app/-/preset-app-4.1.1.tgz#2d19264232bb36cc92dc60db2776b1f1da244bf8"
+  integrity sha512-1TkNDHbWM9EtpytZHp+BnTpPm+ktwNusdZIpcyr4JTUCdcnNQwwktCTV8ExDR2WpGLQRo6v3Kdg7mgc2ddPYEQ==
   dependencies:
-    "@size-limit/file" "4.0.2"
-    "@size-limit/time" "4.0.2"
+    "@size-limit/file" "4.1.1"
+    "@size-limit/time" "4.1.1"
 
-"@size-limit/time@4.0.2":
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.0.2.tgz#c668697edd2774757d25367630b866ab6dc663f9"
-  integrity sha512-Mjo1B0TJz3xVD63d78Ct4Y4z4zKjpynmuqIkzW36CCmHWfUowlCfGooUKe4KVxymTrR7LPd967gCyKBcNau+dg==
+"@size-limit/time@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@size-limit/time/-/time-4.1.1.tgz#2e13ae2166cb0d45422d6cc754bf95b8352ea3dd"
+  integrity sha512-BoEQ8y5PFlQTSaxCKxjBUEV9pUxewGbM5jnNP51dgNalqHj4XPK7QVF0G3ub3R29u7cMc3Aua5Z5mLeLfDqKWg==
   dependencies:
-    estimo "^2.0.1"
-    react "^16.12.0"
+    estimo "^2.0.2"
+    react "^16.13.0"
 
 "@szmarczak/http-timer@^1.1.2":
   version "1.1.2"
@@ -2711,7 +2711,7 @@ ci-info@^2.0.0:
   resolved "https://registry.yarnpkg.com/ci-info/-/ci-info-2.0.0.tgz#67a9e964be31a51e15e5010d58e6f12834002f46"
   integrity sha512-5tK7EtrZ0N+OLFMthtqOj4fI2Jeb88C4CAZPu25LDVUgXJ0A3Js4PMGqrn0JU1W0Mh1/Z8wZzYPxqUrXeBboCQ==
 
-ci-job-number@^1.0.0:
+ci-job-number@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/ci-job-number/-/ci-job-number-1.2.1.tgz#42d3c730f227a4128bb0180911d62a818e709254"
   integrity sha512-LZP3CjLaY/jpHNXN9qZ59w160LteXlq5ClabIcqjDNsABY34h7VemHvfSySuviP257fsHPXsEZ9s6JDP/c/luA==
@@ -4090,7 +4090,7 @@ esrecurse@^4.1.0:
   dependencies:
     estraverse "^4.1.0"
 
-estimo@^2.0.1:
+estimo@^2.0.2:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/estimo/-/estimo-2.0.2.tgz#16e7cd6e83452961fb079c42d1e6a982fd356d5f"
   integrity sha512-kMWfSqqQzKryrwS/E6rxR95l+HJAUrIo+NYnOD/6nvbaSBj5/uiQer+5VVkN0l7NFZBbcjgq0hH2wAytptHkUQ==
@@ -9234,7 +9234,7 @@ react-is@^16.12.0, react-is@^16.8.1, react-is@^16.8.4:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.0.tgz#0f37c3613c34fe6b37cd7f763a0d6293ab15c527"
   integrity sha512-GFMtL0vHkiBv9HluwNZTggSn/sCyEt9n02aM0dSAjGGyqyNlAyftYm4phPxdvCigG15JreC5biwxCgTAJZ7yAA==
 
-react@^16.12.0:
+react@^16.13.0:
   version "16.13.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.13.0.tgz#d046eabcdf64e457bbeed1e792e235e1b9934cf7"
   integrity sha512-TSavZz2iSLkq5/oiE7gnFzmURKZMltmi193rm5HEoUDAXpzT9Kzw6oNZnGoai/4+fUnm7FqS5dwgUL34TujcWQ==
@@ -10184,14 +10184,14 @@ sitemap@^5.1.0:
     sax "^1.2.4"
     xmlbuilder "^13.0.2"
 
-size-limit@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.0.2.tgz#fad45d0a99c55fc443903666c1bda601417508cc"
-  integrity sha512-Pk6Ckqio81mUq/D88nRG9EqmMRS8GIuQU3dayVFQtFw9a8Q+HZ9XKZmZTE8tHsKXtXviaVxuRF98vkuBQctxbg==
+size-limit@^4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/size-limit/-/size-limit-4.1.1.tgz#e7b0dd21d72f5b6411e8bda321bf49a152c3ca20"
+  integrity sha512-JvzA65LjrwKDIE6MdSCGaTrM3u+NHpa4n6+xLXXSRk/1e9FFbmDbrXZ3QNSDd7E9yBXefCBH6qqydyH46Q7AEg==
   dependencies:
     bytes "^3.1.0"
     chalk "^3.0.0"
-    ci-job-number "^1.0.0"
+    ci-job-number "^1.2.1"
     cosmiconfig "^6.0.0"
     globby "^11.0.0"
     read-pkg-up "^7.0.1"
