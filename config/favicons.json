@@ -9,7 +9,7 @@
 
     "background": "#1db9ce",
     "theme_color": "#1db9ce",
-    "appleStatusBarStyle": "black-translucent",
+    "appleStatusBarStyle": "default",
 
     "url": "https://svind.now.sh",
     "start_url": "/",

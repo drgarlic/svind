@@ -1,10 +1,3 @@
-html {
-    @apply antialiased;
-    font-size: 14px;
-}
-
-@media (min-width: 420px) {
-    html {
-        font-size: 16px;
-    }
-}
+/*
+Try to create as less custom classes as possible
+*/

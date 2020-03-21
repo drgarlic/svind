@@ -1,4 +1,5 @@
-const cacheName = 'cache-' + Date.now();
+// Cache name auto updated by Gulp, do not edit this line !
+const cacheName = 'cache-svind-1.0.1';
 
 const filesToCache = [
     '/',
@@ -8,10 +9,9 @@ const filesToCache = [
     '/bundle.js',
 ];
 
-console.log(`[Service Worker] Origin: ${self.location.origin}`);
-
 const regexesCacheFirst = [
     self.location.origin,
+    'https://rsms.me/inter/',
 ];
 
 const regexesCacheOnly = [
@@ -24,6 +24,8 @@ const regexesOnlineFirst = [
 
 const regexesOnlineOnly = [
 ];
+
+console.log(`[Service Worker] Origin: ${self.location.origin}`);
 
 self.addEventListener('install', (event) => {
     console.log('[Service Worker] Install');
@@ -64,51 +66,59 @@ const update = (event, cache) => {
     });
 };
 
-const cacheFirst = (event, cache) => {
-    console.log(`[Service Worker] Cache first: ${event.request.url}`);
-    const fun = update(event, cache);
-    return cache || fun;
+const cacheFirst = {
+    method: (event, cache) => {
+        console.log(`[Service Worker] Cache first: ${event.request.url}`);
+        const fun = update(event, cache);
+        return cache || fun;
+    },
+    regexes: regexesCacheFirst,
 };
 
-const cacheOnly = (event, cache) => {
-    console.log(`[Service Worker] Cache only: ${event.request.url}`);
-    return cache || update(event, cache);
+const cacheOnly = {
+    method: (event, cache) => {
+        console.log(`[Service Worker] Cache only: ${event.request.url}`);
+        return cache || update(event, cache);
+    },
+    regexes: regexesCacheOnly,
 };
 
-const onlineFirst = (event, cache) => {
-    console.log(`[Service Worker] Online first: ${event.request.url}`);
-    return update(event, cache);
+const onlineFirst = {
+    method: (event, cache) => {
+        console.log(`[Service Worker] Online first: ${event.request.url}`);
+        return update(event, cache);
+    },
+    regexes: regexesOnlineFirst,
 };
 
-const onlineOnly = (event) => {
-    console.log(`[Service Worker] Online only: ${event.request.url}`);
-    return fetch(event.request);
+const onlineOnly = {
+    method: (event) => {
+        console.log(`[Service Worker] Online only: ${event.request.url}`);
+        return fetch(event.request);
+    },
+    regexes: regexesOnlineOnly,
 };
 
 self.addEventListener('fetch', (event) => {
     event.respondWith(
         caches.match(event.request).then((cache) => {
-            for (const regex of regexesOnlineFirst) {
-                if (RegExp(regex).test(event.request.url)) {
-                    return onlineFirst(event, cache);
+            // The order matters !
+            const patterns = [
+                onlineFirst,
+                onlineOnly,
+                cacheFirst,
+                cacheOnly
+            ];
+
+            for (let pattern of patterns) {
+                for (let regex of pattern.regexes) {
+                    if (RegExp(regex).test(event.request.url)) {
+                        return pattern.method(event, cache);
+                    }
                 }
             }
-            for (const regex of regexesOnlineOnly) {
-                if (new RegExp(regex).test(event.request.url)) {
-                    return onlineOnly(event);
-                }
-            }
-            for (const regex of regexesCacheFirst) {
-                if (new RegExp(regex).test(event.request.url)) {
-                    return cacheFirst(event, cache);
-                }
-            }
-            for (const regex of regexesCacheOnly) {
-                if (new RegExp(regex).test(event.request.url)) {
-                    return cacheOnly(event);
-                }
-            }
-            return onlineFirst(event, cache);
+
+            return onlineFirst.method(event, cache);
         })
     );
 });
