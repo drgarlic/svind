@@ -1,17 +1,11 @@
 {
     "path": "/assets/favicons/",
 
-    "appName": "svind",
-    "appShortName": "svind",
-    "appDescription": "description",
-    "developerName": null,
-    "developerURL": null,
-
-    "background": "#1db9ce",
-    "theme_color": "#1db9ce",
+    "background": "#d61f69",
+    "theme_color": "#d61f69",
     "appleStatusBarStyle": "default",
 
-    "url": "https://svind.now.sh",
+    "scope": "/",
     "start_url": "/",
 
     "display": "standalone",
@@ -23,13 +17,29 @@
     "replace": true,
 
     "icons": {
-        "android": { "offset": 5 },
-        "appleIcon": { "offset": 5 },
-        "appleStartup": { "offset": 20 },
+        "android": {
+            "background": "#d61f69",
+            "offset": 5
+        },
+        "appleIcon": {
+            "offset": 5
+        },
+        "appleStartup": {
+            "offset": 10
+        },
         "coast": false,
-        "favicons": { "offset": 5 },
-        "firefox": { "offset": 10 },
-        "windows": { "offset": 5 },
+        "favicons": {
+            "background": "#d61f69",
+            "offset": 5
+        },
+        "firefox": {
+            "offset": 10,
+            "overlayGlow": false
+        },
+        "windows": {
+            "background": "#d61f69",
+            "offset": 5
+        },
         "yandex": false
     }
 }

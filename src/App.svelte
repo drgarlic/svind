@@ -8,30 +8,30 @@
     } from './store';
 
     if ('serviceWorker' in navigator) {
-        if (process.env.NODE_ENV === 'production') {
-            navigator.serviceWorker.register('/service-worker.js')
-                .then((registration) => {
-                    registration.addEventListener('updatefound', () => {
-                        console.log('[Service Worker] Update found');
-                        setTimeout(() => {
-                            $updateAvailable = true;
-                        }, 500);
-                    })
+        navigator.serviceWorker.getRegistrations()
+            .then((registrations) => {
+                registrations.forEach((registration) => {
+                    registration.unregister();
                 });
-        } else {
-            navigator.serviceWorker.getRegistrations()
-                .then((registrations) => {
-                    registrations.forEach((registration) => {
-                        registration.unregister();
-                    });
-                    return registrations.length;
-                })
-                .then((len) => {
-                    if (len > 0) {
-                        location.reload();
-                    }
-                });
-        }
+                return registrations.length || 0;
+            })
+            .then((len) => {
+                if (process.env.NODE_ENV === 'production') {
+                    navigator.serviceWorker.register('/service-worker.js')
+                        .then((registration) => {
+                            if (len > 0) {
+                                registration.addEventListener('updatefound', () => {
+                                    console.log('[Service Worker] Update found');
+                                    setTimeout(() => {
+                                        $updateAvailable = true;
+                                    }, 500);
+                                });
+                            }
+                        });
+                } else if (len > 0) {
+                    location.reload();
+                }
+            });
     }
 </script>
 

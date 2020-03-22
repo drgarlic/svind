@@ -23,13 +23,13 @@
         fixed
         bottom-0
         inset-x-0
-        pb-6
+        pb-3
         {transitions}
     ">
         <div class="
             max-w-screen-xl
             mx-auto
-            px-2
+            px-3
             sm:px-6
             lg:px-8
         ">

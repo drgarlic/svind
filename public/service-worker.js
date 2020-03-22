@@ -1,5 +1,5 @@
 // Cache name auto updated by Gulp, do not edit this line !
-const cacheName = 'cache-svind-1.0.1';
+const cacheName = 'cachenn-svind-1.0.0';
 
 const filesToCache = [
     '/',
@@ -19,7 +19,7 @@ const regexesCacheOnly = [
 
 const regexesOnlineFirst = [
     self.location.origin + '/api/',
-    'localhost',
+    // 'localhost',
 ];
 
 const regexesOnlineOnly = [

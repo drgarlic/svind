@@ -9,6 +9,13 @@ import webp from 'gulp-webp';
 import * as faviconsConfig from './config/favicons.json';
 import * as packageJson from './package.json';
 
+faviconsConfig.appName = packageJson.name;
+faviconsConfig.appShortName = packageJson.name;
+faviconsConfig.appDescription = packageJson.description;
+faviconsConfig.developerName = packageJson.author.name;
+faviconsConfig.developerURL = packageJson.author.url;
+faviconsConfig.version = packageJson.version;
+
 const path = {
     faviconsFrom: 'src/assets/svg/logo.svg',
     faviconsTo: `public${faviconsConfig.path}`,
