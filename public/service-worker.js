@@ -19,7 +19,7 @@ const regexesCacheOnly = [
 
 const regexesOnlineFirst = [
     self.location.origin + '/api/',
-    // 'localhost',
+    'localhost',
 ];
 
 const regexesOnlineOnly = [

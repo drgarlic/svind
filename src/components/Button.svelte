@@ -49,6 +49,8 @@
         `
         if (! light) {
             colors += `
+                dark:text-pink-500
+                dark:hover:text-pink-400
                 dark:bg-gray-900
                 dark:hover:bg-gray-800
             `
@@ -57,6 +59,8 @@
         colors = `
             text-pink-600
             hover:text-pink-500
+            dark:text-pink-500
+            dark:hover:text-pink-400
         `
     }
 

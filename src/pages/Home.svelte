@@ -24,6 +24,7 @@
         with
         <span class="
             text-pink-600
+            dark:text-pink-500
         ">Svind</span>
     </h2>
     <p class="

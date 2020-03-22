@@ -22,7 +22,10 @@
         dark:text-gray-100
     ">
         {#await promise}
-            <span class="text-gray-600">Waiting...</span>
+            <span class="
+                text-gray-600
+                dark:text-gray-500
+            ">Waiting...</span>
         {:then date}
             {date}
         {:catch error}
