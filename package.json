@@ -2,6 +2,7 @@
   "name": "svind",
   "version": "1.0.0",
   "description": "A functionnal, Svelte 3, SEO friendly, PWA, with Tailwind CSS and Zeit Now, boilerplate that is up to date and works out of the box.",
+  "homepage": "https://svind.now.sh",
   "author": {
     "name": "Kevin Gawlik",
     "email": "kevin@gawlik.io",

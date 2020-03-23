@@ -3,7 +3,7 @@ import {
     streamToPromise,
 } from 'sitemap';
 
-import * as faviconsConfig from '../config/favicons.json';
+import * as packageJson from '../package.json';
 
 const urls = [
     {
@@ -18,7 +18,7 @@ export default (req, res) => {
     res.setHeader('Content-Type', 'application/xml');
 
     const sitemap = new SitemapStream({
-        hostname: faviconsConfig.url,
+        hostname: packageJson.homepage,
     });
 
     urls.forEach((url) => {
