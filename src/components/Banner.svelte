@@ -4,6 +4,7 @@
     import Transition from './Transition.svelte';
 
     export let hasButton;
+    export let hasIcon;
     export let toggle;
 
     const dispatch = createEventDispatcher();
@@ -24,6 +25,7 @@
         bottom-0
         inset-x-0
         pb-3
+        sm:pb-5
         {transitions}
     ">
         <div class="
@@ -53,8 +55,15 @@
                         items-center
                         truncate
                     ">
+                        {#if hasIcon}
+                            <span class="flex p-2 rounded-lg bg-pink-800">
+                                <slot name="icon">
+                                    <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24" />
+                                </slot>
+                            </span>
+                        {/if}
                         <p class="
-                            px-3
+                            mx-3
                             font-medium
                             text-white
                             truncate

@@ -24,7 +24,7 @@
         {#await promise}
             <span class="
                 text-gray-600
-                dark:text-gray-400
+                dark:text-gray-300
             ">
                 Waiting...
             </span>
@@ -34,7 +34,14 @@
             Server unavailable !
         {/await}
     </h2>
-    <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+    <div class="
+        mt-5
+        max-w-md
+        mx-auto
+        sm:flex
+        sm:justify-center
+        md:mt-8
+    ">
         <Button
             big
             url="/"

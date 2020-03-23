@@ -31,7 +31,14 @@
     ">
         Page not found
     </h2>
-    <div class="mt-5 max-w-md mx-auto sm:flex sm:justify-center md:mt-8">
+    <div class="
+        mt-5
+        max-w-md
+        mx-auto
+        sm:flex
+        sm:justify-center
+        md:mt-8
+    ">
         <Button
             big
             url="/"
