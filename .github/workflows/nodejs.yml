@@ -1,22 +1,30 @@
-on: push
+name: ci
 
-steps:
-- uses: actions/checkout@v2
-- uses: actions/setup-node@v1
-  with:
-    node-version: '12.x'
-- name: Install
-  run: yarn install
-- name: Build
-  run: yarn build
-- name: Unit tests
-  run: yarn test:unit
-- name: Coverage test
-  run: yarn test:unit:coverage
-- name: Lint test
-  run: yarn test:lint
-- name: Size test
-  run: yarn test:size
-- name: Lighthouse audit
-  run: yarn test:audit
-  
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      CI: true
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Install
+      run: yarn install
+    - name: Build
+      run: yarn build
+    - name: Unit tests
+      run: yarn test:unit
+    - name: Coverage test
+      run: yarn test:unit:coverage
+    - name: Lint test
+      run: yarn test:lint
+    - name: Size test
+      run: yarn test:size
+    - name: Lighthouse audit
+      run: yarn test:audit
