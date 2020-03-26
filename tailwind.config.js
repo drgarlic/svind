@@ -45,9 +45,9 @@ module.exports = {
             variants.forEach((variant) => {
                 addVariant(variant.name, ({ modifySelectors, separator }) => {
                     modifySelectors(({ className }) => {
-                        return `.${e(`${variant.name}${separator}${className}`)}:${variant.css}`
-                    })
-                })
+                        return `.${e(`${variant.name}${separator}${className}`)}:${variant.css}`;
+                    });
+                });
             });
         }
     ]

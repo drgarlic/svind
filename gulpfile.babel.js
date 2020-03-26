@@ -15,6 +15,7 @@ faviconsConfig.appDescription = packageJson.description;
 faviconsConfig.developerName = packageJson.author.name;
 faviconsConfig.developerURL = packageJson.author.url;
 faviconsConfig.version = packageJson.version;
+faviconsConfig.url = packageJson.homepage;
 
 const path = {
     faviconsFrom: 'src/assets/svg/logo.svg',
@@ -26,9 +27,20 @@ export const clean = () => del([
 ]);
 
 export const updateServiceWorker = () => {
+    // Show the version update banner:
+
+    // - On all version changes
+    // const version = packageJson.version;
+
+    // - On major and minor version changes
+    const version = packageJson.version.substr(0, packageJson.version.lastIndexOf('.'));
+
+    // - Only on major version changes
+    // const version = packageJson.version.split('.')[0];
+
     return gulp.src('public/service-worker.js')
-      .pipe(replace(/'cache-.*'/, `'cache-${packageJson.name}-${packageJson.version}'`))
-      .pipe(gulp.dest('public'));
+        .pipe(replace(/'cache-.*'/, `'cache-${packageJson.name}-${version}'`))
+        .pipe(gulp.dest('public'));
 };
 
 export const copyAssets = () => {

@@ -5,13 +5,12 @@ import {
 
 import * as packageJson from '../package.json';
 
+// More information here: https://www.npmjs.com/package/sitemap
+
 const urls = [
     {
         url: '/',
-    },
-    {
-        url: '/date',
-    },
+    }
 ];
 
 export default (req, res) => {

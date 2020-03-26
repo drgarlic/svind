@@ -4,7 +4,7 @@
 
 `svind` is a very simple boilerplate that bundles `svelte`, `tailwind`, `now` and a few extras.
 
-I tried to keep the project as simple as possible but with enough to be able to write code right away without having to think about the boring things.
+I tried to keep the project as simple as possible but with enough to be able to write code right away without having to take care of the boring things first.
 
 ## Warning
 
@@ -64,7 +64,7 @@ Then install the packages with: `yarn install`
 
 You might want to have aliases in your project just like in `Vue`. For example being able to do `src/components/X.svelte` instead of `../../../../../../components/X.svelte` when you're in a deep component.
 
-If so, you can run the following command in your terminal to install a `rollup` package that let you do just that: `yarn add -D @rollup/plugin-alias`
+If so, run the following command in your terminal to install a `rollup` package that let you do just that: `yarn add -D @rollup/plugin-alias`
 
 Then add this code in your `rollup.config.js` file in the `plugins` array before `svelte({...})`:
 
@@ -81,9 +81,15 @@ alias({
 
 Here we just create a shortcut to the root of our source folder.
 
+Finally import the library in the file using the following code:
+
+```js
+import alias from '@rollup/plugin-alias';
+```
+
 #### 1.3 `process.env` variables (optionnal)
 
-`process.env` variables are very common in `webpack` projects. You probably used them in `Vue`, `React` or even `Angular` but here, they don't exist in `rollup`.
+`process.env` variables are very common in `webpack` projects. You probably used them in `Vue`, `React` or even `Angular` but here, they aren't accessileb in `Svelte`.
 
 But ! There is a way to add them. All you have to do is run this command in your terminal:
 
@@ -100,13 +106,19 @@ replace({
 }),
 ```
 
-and finally add the following line in the same file just after `const production = ! process.env.ROLLUP_WATCH;`:
+This code will let you use 2 variables in your `.svelte` files: `process.browser` and `process.env.NODE_ENV`.
+
+Then add the following line in the same file just after `const production = ! process.env.ROLLUP_WATCH;`:
 
 ```js
 const mode = production ? 'production' : 'development';
 ```
 
-Now, you'll be able to call `process.env.NODE_ENV` just like you did with your `webpack` projects !
+Finally import the library in the file using the following code:
+
+```js
+import replace from '@rollup/plugin-replace';
+```
 
 ### 2. Tailwind
 
@@ -117,7 +129,7 @@ The installation of `Tailwind` is a bit harder than those of other CSS libraries
 First run this in your terminal to install the packages:
 
 ```bash
-yarn add -D tailwindcss @tailwindcss/ui postcss autoprefixer cssnano postcss-import @fullhuman/postcss-purgecss
+yarn add -D tailwindcss @tailwindcss/ui postcss autoprefixer cssnano postcss-import @fullhuman/postcss-purgecss rollup-plugin-postcss
 ```
 
 Then create a `main.css` file in `src/` with the following code:
