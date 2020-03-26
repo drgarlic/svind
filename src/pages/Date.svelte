@@ -24,7 +24,7 @@
         {#await promise}
             <span class="
                 text-gray-600
-                dark:text-gray-400
+                dark:text-gray-500
             ">
                 Waiting...
             </span>
