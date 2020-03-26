@@ -14,11 +14,14 @@ body {
     /* Remember to change the appleStatusBarStyle property of the favicons config according to these color */
 
     /* background-color: #1db9ce; */
+
     @apply bg-white;
+    @apply text-gray-900;
 }
 
 @media (prefers-color-scheme: dark) {
     body {
         @apply bg-black;
+        @apply text-gray-100;
     }
 }

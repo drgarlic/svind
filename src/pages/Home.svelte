@@ -13,11 +13,9 @@
         tracking-tight
         leading-10
         font-extrabold
-        text-gray-900
         sm:text-5xl
         sm:leading-none
         md:text-6xl
-        dark:text-gray-100
     ">
         Simplify Svelte
         <br class="xl:hidden" />
