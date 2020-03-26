@@ -4,9 +4,9 @@ const cacheName = 'cache-svind-1.0';
 const filesToCache = [
     '/',
     '/index.html',
-    '/bundle.css',
-    '/bundle.tailwind.css',
-    '/bundle.js',
+    '/build/bundle.css',
+    '/build/bundle.tailwind.css',
+    '/build/bundle.js',
 ];
 
 const regexesCacheFirst = [
