@@ -68,7 +68,6 @@
     "gulp": "gulp",
     "now": "now",
     "now:dev": "now dev",
-    "now-dev": "yarn dev",
     "now:prod": "now --prod",
     "prebuild": "gulp",
     "prod": "run-s build start",
