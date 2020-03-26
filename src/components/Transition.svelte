@@ -4,8 +4,8 @@
     export let inState;
     export let onState;
     export let outTransition;
-    export let outState;
-    export let startsHidden;
+    export let outState = undefined;
+    export let startsHidden = true;
 
     outState = ! outState && inState;
 
