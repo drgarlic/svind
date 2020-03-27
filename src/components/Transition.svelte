@@ -3,23 +3,21 @@
     export let inTransition;
     export let inState;
     export let onState;
-    export let outTransition;
-    export let outState = undefined;
-    export let startsHidden = false;
+    export let outTransition = inTransition;
+    export let outState = inState;
+    export let offHidden = false;
 
-    outState = ! outState && inState;
-
-    let visible = false;
+    let visible = toggle;
 
     let initialized = false;
     let firstToggleState = toggle;
     $: firstToggleState !== toggle && (initialized = true);
 
-    let state = inState;
+    let state = visible ? onState : inState;
     let transition = '';
 
-    const startEnterEvent = () => {
-        if (startsHidden && ! visible) {
+    const enterEvent = () => {
+        if (offHidden && ! visible) {
             visible = true;
             setTimeout(() => {
                 transition = inTransition;
@@ -32,7 +30,7 @@
     };
 
     let leaveEventQueue = [];
-    const startLeaveEvent = () => {
+    const leaveEvent = () => {
         transition = outTransition;
         state = outState;
         const regex = /duration-[0-9]+/g;
@@ -48,14 +46,14 @@
         }, duration));
     }
 
-    $: initialized && (toggle ? startEnterEvent() : startLeaveEvent());
+    $: initialized && (toggle ? enterEvent() : leaveEvent());
 
     $: transitions = `
         transition
         transform
         ${transition}
         ${state}
-        ${startsHidden && ! visible ? 'hidden' : ''}
+        ${offHidden && ! visible ? 'hidden' : ''}
     `;
 </script>
 
