@@ -5,7 +5,7 @@
     export let onState;
     export let outTransition;
     export let outState = undefined;
-    export let startsHidden = true;
+    export let startsHidden = false;
 
     outState = ! outState && inState;
 
