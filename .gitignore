@@ -32,6 +32,12 @@ coverage
 node_modules
 
 # ---
+# Now
+# ---
+
+.now
+
+# ---
 # Production
 # ---
 
@@ -43,5 +49,3 @@ public/build
 # ---
 
 yarn-error.log
-
-.now
