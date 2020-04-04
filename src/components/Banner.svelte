@@ -1,7 +1,7 @@
 <script>
     import { createEventDispatcher } from 'svelte';
 
-    import Transition from './Transition.svelte';
+    import Transition from './Transition';
 
     export let hasButton;
     export let hasIcon;

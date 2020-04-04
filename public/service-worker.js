@@ -1,12 +1,20 @@
 // Cache name auto updated by Gulp, do not edit this line !
-const cacheName = 'cache-svind-1.0';
+const cacheName = 'cache-test-1.0';
 
 const filesToCache = [
     '/',
     '/index.html',
-    '/build/bundle.css',
-    '/build/bundle.tailwind.css',
-    '/build/bundle.js',
+    '/tailwind.css',
+];
+
+// Regexes are sorted by priority
+
+const regexesOnlineFirst = [
+    self.location.origin + '/api/',
+];
+
+const regexesOnlineOnly = [
+    'localhost',
 ];
 
 const regexesCacheFirst = [
@@ -15,14 +23,6 @@ const regexesCacheFirst = [
 ];
 
 const regexesCacheOnly = [
-];
-
-const regexesOnlineFirst = [
-    self.location.origin + '/api/',
-    'localhost',
-];
-
-const regexesOnlineOnly = [
 ];
 
 console.log(`[Service Worker] Origin: ${self.location.origin}`);

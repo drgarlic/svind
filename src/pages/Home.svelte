@@ -1,10 +1,10 @@
 <script>
-    import Button from 'src/components/Button.svelte';
-    import Page from 'src/templates/Page.svelte';
+    import Button from '/components/Button';
+    import Page from '/templates/Page';
 
     import {
         updateAvailable,
-    } from 'src/store';
+    } from '/store';
 </script>
 
 <Page>

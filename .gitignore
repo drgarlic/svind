@@ -1,24 +1,4 @@
 # ---
-# Cypress
-# ---
-
-cypress/**/*example*
-cypress/plugins
-cypress/support
-
-# ---
-# Jest
-# ---
-
-coverage
-
-# ---
-# Lighthouse
-# ---
-
-.lighthouseci
-
-# ---
 # Mac OS
 # ---
 
@@ -41,8 +21,9 @@ node_modules
 # Production
 # ---
 
-public/assets
-public/build
+public/tailwind.css
+public/dist
+public/favicons
 
 # ---
 # Yarn

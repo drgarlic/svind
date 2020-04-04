@@ -1,9 +1,9 @@
 <script>
     import Router from 'svelte-spa-router';
 
-    import Date from 'src/pages/Date.svelte';
-    import Home from 'src/pages/Home.svelte';
-    import NotFound from 'src/pages/NotFound.svelte';
+    import Date from '/pages/Date';
+    import Home from '/pages/Home';
+    import NotFound from '/pages/NotFound';
     
     const routes = {
         '/': Home,
