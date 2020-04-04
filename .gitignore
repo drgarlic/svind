@@ -24,6 +24,7 @@ node_modules
 public/tailwind.css
 public/dist
 public/favicons
+*.webp
 
 # ---
 # Yarn
