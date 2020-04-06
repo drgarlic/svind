@@ -18,13 +18,13 @@ jobs:
       run: yarn install
     - name: Build
       run: yarn build
-    - name: Unit tests
-      run: yarn test:unit
-    - name: Coverage test
-      run: yarn test:unit:coverage
-    - name: Lint test
-      run: yarn test:lint
-    - name: Size test
-      run: yarn test:size
-    - name: Lighthouse audit
-      run: yarn test:audit
+    # - name: Unit tests
+    #   run: yarn test:unit
+    # - name: Coverage test
+    #   run: yarn test:unit:coverage
+    # - name: Lint test
+    #   run: yarn test:lint
+    # - name: Size test
+    #   run: yarn test:size
+    # - name: Lighthouse audit
+    #   run: yarn test:audit
