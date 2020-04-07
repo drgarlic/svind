@@ -1,8 +1,14 @@
 {
-  "name": "test",
+  "name": "svind",
   "version": "1.0.0",
-  "description": "test",
-  "author": "gawlk",
+  "description": "A functionnal, Svelte 3, SEO friendly, PWA, with Tailwind CSS and Zeit Now, boilerplate that is up to date and works out of the box.",
+  "homepage": "https://svind.now.sh",
+  "author": {
+    "name": "Kevin Gawlik",
+    "email": "kevin@gawlik.io",
+    "url": "https://github.com/gawlk"
+  },
+  "contributors": [],
   "main": "src/App.svelte",
   "license": "MIT",
   "dependencies": {
