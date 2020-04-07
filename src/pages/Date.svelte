@@ -1,6 +1,6 @@
 <script>
-    import Button from 'src/components/Button.svelte';
-    import Page from 'src/templates/Page.svelte';
+    import Button from '/components/Button';
+    import Page from '/templates/Page';
 
     const promise = (async () => {
         const res = await fetch('/api/date');

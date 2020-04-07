@@ -10,7 +10,12 @@ module.exports = {
                     ...defaultTheme.fontFamily.sans,
                 ],
             },
+            fontSize: {
+                '14px': '14px',
+                '16px': '16px'
+            },
             screens: {
+                xs: '420px',
                 dark: {
                     raw: '(prefers-color-scheme: dark)',
                 },

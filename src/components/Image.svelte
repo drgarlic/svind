@@ -1,5 +1,4 @@
 <script>
-    // Because Svelte doesn't allow to add css classes to a component, here's a workaround
     let _class = '';
     export { _class as class };
 

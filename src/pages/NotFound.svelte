@@ -1,12 +1,12 @@
 <script>
-    import Button from 'src/components/Button.svelte';
-    import Page from 'src/templates/Page.svelte';
-    import Image from 'src/components/Image.svelte';
+    import Button from '/components/Button';
+    import Page from '/templates/Page';
+    import Image from '/components/Image';
 </script>
 
 <Page>
     <Image
-        path="logo.png"
+        path="svelte.png"
         alt="Svelte logo"
         class="
         h-32
