@@ -20,9 +20,6 @@ faviconsConfig.developerURL = packageJson.author.url;
 faviconsConfig.version = packageJson.version;
 faviconsConfig.url = packageJson.homepage;
 
-faviconsLogo = 'public/assets/svg/logo.svg';
-faviconsDestination = `public${faviconsConfig.path}`;
-
 const updateServiceWorker = () => {
     // Show the version update banner:
 
@@ -79,14 +76,14 @@ const generateWebps = () => {
 };
 
 const generateFavicons = () => {
-    return gulp.src(faviconsLogo)
+    return gulp.src('gulp/favicon.*')
         .pipe(favicons.stream(faviconsConfig))
-        .pipe(gulp.dest(faviconsDestination));
+        .pipe(gulp.dest(`public${faviconsConfig.path}`));
 };
 
 const injectFavicons = () => {
     return gulp.src('public/index.html')
-        .pipe(inject(gulp.src([`${faviconsDestination}${faviconsConfig.html}`]), {
+        .pipe(inject(gulp.src([`public${faviconsConfig.path}${faviconsConfig.html}`]), {
             starttag: '<!-- inject:favicons -->',
             transform: (filepath, file) => {
                 return file.contents.toString();
