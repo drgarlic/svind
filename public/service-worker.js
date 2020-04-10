@@ -1,5 +1,5 @@
 // Cache name auto updated by Gulp, do not edit this line !
-const cacheName = 'cache-test-1.0';
+const cacheName = 'cache-svind-1.0';
 
 const filesToCache = [
     '/',

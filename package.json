@@ -15,9 +15,9 @@
     "svelte": "^3.20.1"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@fullhuman/postcss-purgecss": "^2.1.2",
     "@tailwindcss/ui": "^0.1.3",
-    "autoprefixer": "^9.7.5",
+    "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "favicons": "^6.0.0",
     "gulp": "^4.0.2",
@@ -35,7 +35,6 @@
   },
   "scripts": {
     "dev": "gulp && svelvet",
-    "build": "gulp prod && NODE_ENV=production svelvet",
-    "prod": "yarn build && servor public"
+    "build": "gulp prod && NODE_ENV=production svelvet"
   }
 }
