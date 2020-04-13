@@ -28,7 +28,7 @@
     "gulp-webp": "^4.0.1",
     "now": "^17.1.1",
     "rollup-plugin-svelte": "^5.2.1",
-    "sitemap": "^6.1.0",
+    "sitemap": "^6.1.1",
     "svelte-spa-router": "^2.1.0",
     "svelvet": "^0.4.1",
     "tailwindcss": "^1.2.0"
