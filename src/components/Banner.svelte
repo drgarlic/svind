@@ -16,7 +16,6 @@
     inState="opacity-0 scale-95 translate-y-2"
     onState="opacity-100 scale-100 translate-y-0"
     outTransition="ease-in duration-300"
-    offHidden
     let:transitions={transitions}
 >
     <div class="

@@ -5,7 +5,7 @@
     export let onState;
     export let outTransition = inTransition;
     export let outState = inState;
-    export let offHidden = false;
+    export let offHidden = true;
 
     let visible = toggle;
 
