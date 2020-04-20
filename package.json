@@ -26,7 +26,7 @@
     "gulp-postcss": "^8.0.0",
     "gulp-string-replace": "^1.1.2",
     "gulp-webp": "^4.0.1",
-    "now": "^17.1.1",
+    "now": "^18.0.0",
     "rollup-plugin-svelte": "^5.2.1",
     "sitemap": "^6.1.1",
     "svelte-spa-router": "^2.1.0",
