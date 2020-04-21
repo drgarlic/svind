@@ -24,6 +24,7 @@
         bottom-0
         inset-x-0
         pb-3
+        select-none
         sm:pb-5
         {transitions}
     ">
@@ -55,7 +56,7 @@
                         truncate
                     ">
                         {#if hasIcon}
-                            <span class="flex p-2 rounded-lg bg-pink-800">
+                            <span class="p-2 rounded-lg bg-pink-800">
                                 <slot name="icon">
                                     <svg class="h-6 w-6 text-white" stroke="currentColor" fill="none" viewBox="0 0 24 24" />
                                 </slot>
@@ -96,7 +97,6 @@
                             type="button"
                             aria-label="Closes the banner"
                             class="
-                            flex
                             p-2
                             rounded-md
                             hover:bg-pink-500
