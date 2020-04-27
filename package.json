@@ -16,7 +16,7 @@
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
-    "@tailwindcss/ui": "^0.1.3",
+    "@tailwindcss/ui": "^0.2.2",
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "favicons": "^6.0.0",
