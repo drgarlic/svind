@@ -12,7 +12,7 @@
   "main": "src/App.svelte",
   "license": "MIT",
   "dependencies": {
-    "svelte": "^3.20.1"
+    "svelte": "^3.21.0"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.1.2",
