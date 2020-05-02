@@ -2,30 +2,29 @@ const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 const favicons = require('favicons');
 const faviconsConfig = require('./gulp/favicons.json');
+const fs = require('fs');
 const gulp = require('gulp');
 const imagemin = require('gulp-imagemin');
 const inject = require('gulp-inject');
 const packageJson = require('./package.json');
 const postcss = require('gulp-postcss');
-const purgecss = require('@fullhuman/postcss-purgecss');
 const replace = require('gulp-string-replace');
 const tailwindcss = require('tailwindcss');
 const webp = require('gulp-webp');
 
 const updateServiceWorker = () => {
-    // Show the version update banner:
-
-    // - On all version changes
-    // const version = packageJson.version;
-
-    // - On major and minor version changes
-    const version = packageJson.version.substr(0, packageJson.version.lastIndexOf('.'));
-
-    // - Only on major version changes
-    // const version = packageJson.version.split('.')[0];
+    const filesToPreCache = [
+        '/',
+        '/index.html',
+        '/tailwind.css',
+        ...fs.readdirSync('public/build')
+            .filter(e => ! e.endsWith('.map'))
+            .map(e => '/build/' + e),
+    ];
 
     return gulp.src('public/service-worker.js')
-        .pipe(replace(/'cache-.*'/, `'cache-${packageJson.name}-${version}'`))
+        .pipe(replace(/'cache-.*'/, `'cache-${packageJson.name}-${(+new Date).toString(36)}'`))
+        .pipe(replace(/filesToPreCache = \[(.*\n)*\]/, `filesToPreCache = [\n    '${filesToPreCache.join('\',\n    \'')}'\n]`))
         .pipe(gulp.dest('public'));
 };
 exports.updateServiceWorker = updateServiceWorker;
@@ -56,21 +55,8 @@ const tailwind = () => {
 exports.tailwind = tailwind;
 
 const optimizeCss = () => {
-    const purgecssConfig = {
-        content: [
-            './public/index.html',
-            './src/**/*.svelte'
-        ],
-        defaultExtractor: (content) => {
-            const matches = content.match(/[\w-/.:]+(?<!:)/g) || [];
-            // Special Svelte case when binding a class
-            return matches.map(match => match.startsWith('class:') ? match.substr(6) : match);
-        }
-    };
-
     return gulp.src('public/tailwind.css')
         .pipe(postcss([
-            purgecss(purgecssConfig),
             cssnano()
         ]))
         .pipe(gulp.dest('public'));
@@ -106,7 +92,6 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const dev = gulp.series(
-    updateServiceWorker,
     tailwind,
     generateWebps,
 );
@@ -115,6 +100,7 @@ exports.dev = dev;
 const prod = gulp.series(
     dev,
     optimizeCss,
+    updateServiceWorker,
     generateFavicons,
     injectFavicons,
     optimizeImages,

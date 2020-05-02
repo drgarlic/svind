@@ -9,14 +9,17 @@
     "url": "https://github.com/gawlk"
   },
   "contributors": [],
-  "main": "src/App.svelte",
+  "main": "src/main.js",
   "license": "MIT",
   "dependencies": {
-    "svelte": "^3.21.0"
+    "sirv-cli": "^0.4.5"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.2",
-    "@tailwindcss/ui": "^0.2.2",
+    "@rollup/plugin-alias": "^3.1.0",
+    "@rollup/plugin-commonjs": "^11.1.0",
+    "@rollup/plugin-node-resolve": "^7.1.3",
+    "@rollup/plugin-replace": "^2.3.2",
+    "@tailwindcss/ui": "^0.3.0",
     "autoprefixer": "^9.7.6",
     "cssnano": "^4.1.10",
     "favicons": "^6.0.0",
@@ -27,14 +30,25 @@
     "gulp-string-replace": "^1.1.2",
     "gulp-webp": "^4.0.1",
     "now": "^18.0.0",
+    "rollup": "^2.7.6",
+    "rollup-plugin-delete": "^1.2.0",
+    "rollup-plugin-livereload": "^1.3.0",
     "rollup-plugin-svelte": "^5.2.1",
+    "rollup-plugin-terser": "^5.3.0",
     "sitemap": "^6.1.2",
+    "svelte": "^3.21.0",
+    "svelte-class-transition": "^1.0.0",
+    "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.1.0",
-    "svelvet": "^0.4.2",
-    "tailwindcss": "^1.3.5"
+    "tailwindcss": "^1.4.4"
+  },
+  "resolutions": {
+    "sharp": "^0.25.2"
   },
   "scripts": {
-    "dev": "gulp && svelvet",
-    "build": "gulp prod && NODE_ENV=production svelvet"
+    "build": "rollup -c && NODE_ENV=production gulp prod",
+    "dev": "gulp && rollup -c -w",
+    "prod": "yarn build && yarn start",
+    "start": "sirv public --host 0.0.0.0"
   }
 }

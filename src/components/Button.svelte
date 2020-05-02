@@ -4,6 +4,7 @@
 
     export let url = undefined;
     export let action = undefined;
+    export let type = undefined;
     export let label = '';
 
     export let big = false;
@@ -75,6 +76,7 @@
         border-transparent
         font-medium
         rounded-md
+        select-none
         focus:outline-none
         transition
         duration-150
@@ -84,9 +86,6 @@
 
 <div class="
     rounded-md
-    not-first:mt-3
-    sm:not-first:mt-0
-    sm:not-first:ml-3
     {! tertiary && (big ? 'shadow' : 'shadow-sm')}
 ">
     {#if url}
@@ -104,6 +103,17 @@
             on:click={action}
             aria-label={label}
             type="button"
+            class="
+            {classes}
+        ">
+            <slot>
+                Name
+            </slot>
+        </button>
+    {:else if type}
+        <button
+            aria-label={label}
+            {type}
             class="
             {classes}
         ">

@@ -2,8 +2,26 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const tailwindUI = require('@tailwindcss/ui');
 
 module.exports = {
+    purge: [
+        './public/index.html',
+        './src/**/*.svelte'
+    ],
     theme: {
         extend: {
+            colors: {
+                coal: {
+                    '50': '#f9f9f9',
+                    '100': '#f7f7f7',
+                    '200': '#eaeaea',
+                    '300': '#dbdbdb',
+                    '400': '#b2b2b2',
+                    '500': '#7f7f7f',
+                    '600': '#636363',
+                    '700': '#515151',
+                    '800': '#3f3f3f',
+                    '900': '#2d2d2d',
+                }
+            },
             fontFamily: {
                 sans: [
                     'Inter var',
@@ -28,32 +46,9 @@ module.exports = {
             }
         },
     },
-    variants: {
-        margin: [ 'not-first', 'responsive' ],
-    },
     plugins: [
         tailwindUI({
             // layout: 'sidebar',
-        }),
-        function({ addVariant, e }) {
-            const variants = [
-                {
-                    name: 'not-first',
-                    css: 'not(:first-child)',
-                },
-                {
-                    name: 'not-last',
-                    css: 'not(:last-child)',
-                },
-            ];
-
-            variants.forEach((variant) => {
-                addVariant(variant.name, ({ modifySelectors, separator }) => {
-                    modifySelectors(({ className }) => {
-                        return `.${e(`${variant.name}${separator}${className}`)}:${variant.css}`;
-                    });
-                });
-            });
-        }
+        })
     ]
 };

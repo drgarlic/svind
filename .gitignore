@@ -22,7 +22,7 @@ node_modules
 # ---
 
 public/tailwind.css
-public/dist
+public/build
 public/favicons
 *.webp
 

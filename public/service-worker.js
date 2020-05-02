@@ -1,12 +1,3 @@
-// Cache name auto updated by Gulp, do not edit this line !
-const cacheName = 'cache-svind-1.0';
-
-const filesToCache = [
-    '/',
-    '/index.html',
-    '/tailwind.css',
-];
-
 // Regexes are sorted by priority
 
 const regexesOnlineFirst = [
@@ -25,6 +16,23 @@ const regexesCacheFirst = [
 const regexesCacheOnly = [
 ];
 
+// If the url doesn't match any of those regexes, it will do online first
+
+// /!\ Warning /!\
+// Variables auto updated by Gulp, do not change them !
+const cacheName = 'cache-svind-k9pinsyl';
+const filesToPreCache = [
+    '/',
+    '/index.html',
+    '/tailwind.css',
+    '/build/Date-22e88a4d.js',
+    '/build/Home-a95dcc91.js',
+    '/build/Landing-2a814ce5.js',
+    '/build/NotFound-4b6b2215.js',
+    '/build/main-dd47dd53.js',
+    '/build/main.js'
+];
+
 console.log(`[Service Worker] Origin: ${self.location.origin}`);
 
 self.addEventListener('install', (event) => {
@@ -32,7 +40,7 @@ self.addEventListener('install', (event) => {
     event.waitUntil(
         caches.open(cacheName).then((cache) => {
             console.log(`[Service Worker] Creating cache: ${cacheName}`);
-            return cache.addAll(filesToCache);
+            return cache.addAll(filesToPreCache);
         }).then(() => {
             self.skipWaiting();
         })
@@ -58,7 +66,9 @@ self.addEventListener('activate', (event) => {
 const update = (event, cache) => {
     return fetch(event.request).then((response) => {
         return caches.open(cacheName).then((cache) => {
-            cache.put(event.request, response.clone());
+            if (event.request.method === 'GET') {
+                cache.put(event.request, response.clone());
+            }
             return response;
         });
     }).catch(() => {

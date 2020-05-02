@@ -1,6 +1,6 @@
 <script>
-    import Button from '/components/Button';
-    import Page from '/templates/Page';
+    import Landing from 'src/templates/Landing';
+    import Button from 'src/components/Button';
 
     const promise = (async () => {
         const res = await fetch('/api/date');
@@ -9,16 +9,8 @@
     })();
 </script>
 
-<Page>
-    <h2 class="
-        text-4xl
-        tracking-tight
-        leading-10
-        font-extrabold
-        sm:text-5xl
-        sm:leading-none
-        md:text-6xl
-    ">
+<Landing>
+    <span slot="title">
         {#await promise}
             <span class="
                 text-gray-600
@@ -31,7 +23,7 @@
         {:catch error}
             Server unavailable !
         {/await}
-    </h2>
+    </span>
     <div class="
         mt-5
         max-w-md
@@ -47,4 +39,4 @@
             Go back
         </Button>
     </div>
-</Page>
+</Landing>

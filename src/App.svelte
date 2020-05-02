@@ -1,5 +1,6 @@
 <script>
-    import BannerUpdate from '/components/BannerUpdate';
+    import './sw';
+    import BannerUpdate from './components/BannerUpdate';
     import Router from './Router';
 </script>
 

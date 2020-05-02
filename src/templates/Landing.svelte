@@ -57,6 +57,19 @@
             sm:px-6
         ">
             <div class="text-center">
+                <h2 class="
+                    text-4xl
+                    tracking-tight
+                    leading-10
+                    font-extrabold
+                    sm:text-5xl
+                    sm:leading-none
+                    md:text-6xl
+                ">
+                    <slot name="title">
+                        Title
+                    </slot>
+                </h2>
                 <slot>
                     Content
                 </slot>
