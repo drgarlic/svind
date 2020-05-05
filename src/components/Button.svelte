@@ -34,33 +34,33 @@
 
     let colors = `
         text-white
-        bg-pink-600
-        hover:bg-pink-500
-        focus:shadow-outline-pink
+        bg-red-600
+        hover:bg-red-500
+        focus:shadow-outline-red
     `
 
     if (secondary) {
         colors = `
-            text-pink-600
-            bg-pink-50
+            text-red-600
+            bg-red-50
             hover:bg-white
-            hover:text-pink-500
-            focus:shadow-outline-pink
+            hover:text-red-500
+            focus:shadow-outline-red
         `
         if (! light) {
             colors += `
-                dark:text-pink-500
-                dark:hover:text-pink-400
+                dark:text-red-500
+                dark:hover:text-red-400
                 dark:bg-gray-900
                 dark:hover:bg-gray-800
             `
         }
     } else if (tertiary) {
         colors = `
-            text-pink-600
-            hover:text-pink-500
-            dark:text-pink-500
-            dark:hover:text-pink-400
+            text-red-600
+            hover:text-red-500
+            dark:text-red-500
+            dark:hover:text-red-400
         `
     }
 

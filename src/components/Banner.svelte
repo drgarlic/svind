@@ -36,7 +36,7 @@
             <div class="
                 p-2
                 rounded-lg
-                bg-pink-600
+                bg-red-600
                 shadow-lg
                 sm:p-3
             ">
@@ -62,7 +62,7 @@
                                 <span class="
                                     p-2
                                     rounded-lg
-                                    bg-pink-800
+                                    bg-red-800
                                     text-white
                                 ">
                                     <slot name="icon">
@@ -125,9 +125,9 @@
                                 class="
                                 p-2
                                 rounded-md
-                                hover:bg-pink-500
+                                hover:bg-red-500
                                 focus:outline-none
-                                focus:bg-pink-500
+                                focus:bg-red-500
                                 transition
                                 ease-in-out
                                 duration-150
