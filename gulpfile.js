@@ -108,12 +108,13 @@ const dev = gulp.series(
 exports.dev = dev;
 
 const prod = gulp.series(
-    dev,
+    tailwind,
     optimizeCss,
-    updateServiceWorker,
+    generateWebps,
     generateFavicons,
     injectFavicons,
     optimizeImages,
+    updateServiceWorker,
 );
 exports.prod = prod;
 
