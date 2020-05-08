@@ -1,5 +1,6 @@
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
+const del = require('del');
 const favicons = require('favicons');
 const faviconsConfig = require('./gulp/favicons.json');
 const fs = require('fs');
@@ -43,6 +44,14 @@ const generateFavicons = () => {
         .pipe(gulp.dest(`public${faviconsConfig.path}`));
 };
 exports.generateFavicons = generateFavicons;
+
+const clean = () => {
+    return del([
+        'public/assets/**/*.webp',
+        'public/build/**',
+    ]);
+};
+exports.clean = clean;
 
 const tailwind = () => {
     return gulp.src('gulp/tailwind.css')
@@ -92,6 +101,7 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const dev = gulp.series(
+    clean,
     tailwind,
     generateWebps,
 );

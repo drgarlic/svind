@@ -3,7 +3,7 @@ import {
 } from './store';
 
 if ('serviceWorker' in navigator) {
-    if (PRODUCTION) {
+    if (process.env.NODE_ENV === 'production') {
         navigator.serviceWorker.register('/service-worker.js')
             .then((registration) => {
                 registration.addEventListener('updatefound', () => {

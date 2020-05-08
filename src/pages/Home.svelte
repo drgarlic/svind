@@ -13,8 +13,8 @@
         <br class="xl:hidden" />
         with
         <span class="
-            text-red-600
-            dark:text-red-500
+            text-orange-600
+            dark:text-orange-500
         ">Svind</span>
     </span>
     <p class="

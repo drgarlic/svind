@@ -1,5 +1,4 @@
 import svelte from 'rollup-plugin-svelte';
-import del from 'rollup-plugin-delete';
 import livereload from 'rollup-plugin-livereload';
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
@@ -19,11 +18,6 @@ export default {
         dir: 'public/build/'
     },
     plugins: [
-        del({
-            targets: 'public/build/*',
-            runOnce: true // Otherwise you'll have livereload bugs
-        }),
-
         svelte({
             dev: ! production,
         }),
@@ -35,7 +29,8 @@ export default {
         }),
 
         replace({
-            'PRODUCTION': production,
+            'process.browser': true,
+            'process.env.NODE_ENV': JSON.stringify(production ? 'production' : 'development'),
         }),
 
         resolve({
