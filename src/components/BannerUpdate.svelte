@@ -2,9 +2,7 @@
     import Banner from './Banner';
     import Button from './Button';
 
-    import {
-        updateAvailable,
-    } from 'src/store';
+    import { updateAvailable } from 'src/js/store';
 </script>
 
 <Banner

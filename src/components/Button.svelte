@@ -86,7 +86,7 @@
 
 <div class="
     rounded-md
-    {! tertiary && (big ? 'shadow' : 'shadow-sm')}
+    {! tertiary && (big ? 'shadow' : 'shadow-sm') || ''}
 ">
     {#if url}
         <a

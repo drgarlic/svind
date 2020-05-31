@@ -1,6 +1,4 @@
-import {
-    updateAvailable,
-} from './store';
+import { updateAvailable } from './store';
 
 if ('serviceWorker' in navigator) {
     if (process.env.NODE_ENV === 'production') {
