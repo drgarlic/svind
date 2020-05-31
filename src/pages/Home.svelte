@@ -4,7 +4,7 @@
 
     import {
         updateAvailable,
-    } from 'src/store';
+    } from 'src/js/store';
 </script>
 
 <Landing>
