@@ -6205,10 +6205,10 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-svelte-class-transition@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/svelte-class-transition/-/svelte-class-transition-1.0.0.tgz#29f5f8c09ba2fc3d2674daa8e55b3d599a357fbe"
-  integrity sha512-tXpA0ueL0gGfARtm555+9lNwIT3j9Pnqn46+BggqQ+hOB1aVoySDJuOlG+dfwk7MS3wvKJE42/sMhC/nRAJIew==
+svelte-class-transition@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/svelte-class-transition/-/svelte-class-transition-1.0.1.tgz#8ab7c82726c4477ddeb2c8bd81b29aaa08b84ec8"
+  integrity sha512-536qw/OPxFrSJOcNMCC8kNY8yAOeRxB/QtGuPGXiLxk0EFN3PoYznVUzDP92kkxrr+LAMrKoNvg943KbWoQ08g==
 
 svelte-loadable@^1.4.0:
   version "1.4.0"

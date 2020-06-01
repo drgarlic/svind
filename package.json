@@ -37,7 +37,7 @@
     "rollup-plugin-terser": "^6.1.0",
     "sitemap": "^6.1.4",
     "svelte": "^3.22.3",
-    "svelte-class-transition": "^1.0.0",
+    "svelte-class-transition": "^1.0.1",
     "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.1.0",
     "tailwindcss": "^1.4.6"
