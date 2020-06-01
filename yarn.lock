@@ -6222,10 +6222,10 @@ svelte-spa-chunk@^2.0.0:
   dependencies:
     svelte-loadable "^1.4.0"
 
-svelte-spa-router@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/svelte-spa-router/-/svelte-spa-router-2.1.0.tgz#8a0ea6be99a95d794f84b6b14b3c9ba1b85c389c"
-  integrity sha512-9bcQPTQ6A+Z92Z+NirVVusa/Sw6nqzKwZAKfu1Cl6+XjStf12hfIcPoMfTutEBoX0Ik+z7gJbJ934PKk94BvCg==
+svelte-spa-router@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/svelte-spa-router/-/svelte-spa-router-2.2.0.tgz#ff56ca24890fccb0e6e58e729485a39ae92181ac"
+  integrity sha512-S3KpmiBszjdjkU1QA9FyNgrSdQORbXWp4wl8R147Gl7KoNof/0SfFJ23+9E47jLiNz+lCw1uaCfeHJi2I60bVg==
   dependencies:
     regexparam "1.3.0"
 

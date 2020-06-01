@@ -39,7 +39,7 @@
     "svelte": "^3.22.3",
     "svelte-class-transition": "^1.0.0",
     "svelte-spa-chunk": "^2.0.0",
-    "svelte-spa-router": "^2.1.0",
+    "svelte-spa-router": "^2.2.0",
     "tailwindcss": "^1.4.6"
   },
   "resolutions": {
