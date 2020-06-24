@@ -5,7 +5,7 @@
     export let src;
     export let alt = 'Alt';
 
-    $: path = 'assets/images/' + src;
+    $: path = 'images/' + src;
     $: extension = path.split('.').pop();
     $: pathWithoutExtension = path.substr(0, path.length - extension.length);
 </script>

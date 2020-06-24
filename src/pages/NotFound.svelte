@@ -7,7 +7,7 @@
 <Landing>
     <div slot="title">
         <Image
-            path="svelte.png"
+            src="svelte.png"
             alt="Svelte logo"
             class="
             h-32

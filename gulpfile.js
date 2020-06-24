@@ -91,6 +91,13 @@ const injectFavicons = () => {
 };
 exports.injectFavicons = injectFavicons;
 
+const cleanFaviconsHTML = () => {
+    return del([
+        'public/favicons/*.html',
+    ]);
+};
+exports.cleanFaviconsHTML = cleanFaviconsHTML;
+
 const optimizeImages = () => {
     return gulp.src('public/**/*.+(jpeg|jpg|png|gif)')
         .pipe(imagemin())
@@ -108,6 +115,7 @@ const prod = gulp.series(
     generateWebps,
     generateFavicons,
     injectFavicons,
+    cleanFaviconsHTML,
     optimizeImages,
 );
 exports.prod = prod;
