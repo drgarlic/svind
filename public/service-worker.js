@@ -6,11 +6,13 @@ const regexesOnlineFirst = [
 
 const regexesOnlineOnly = [
     'localhost',
+    'aws',
 ];
 
 const regexesCacheFirst = [
     self.location.origin,
     'https://rsms.me/inter/',
+    'cdn',
 ];
 
 const regexesCacheOnly = [
@@ -20,11 +22,9 @@ const regexesCacheOnly = [
 
 // /!\ Warning /!\
 // Variables auto updated by Gulp, do not change them !
-const cacheName = 'cache-svind-k9yno2rr';
+const cacheName = 'cache-name-id';
 const filesToPreCache = [
-    '/',
-    '/index.html',
-    '/tailwind.css'
+    'file'
 ];
 
 console.log(`[Service Worker] Origin: ${self.location.origin}`);

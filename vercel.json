@@ -2,7 +2,7 @@
     "routes": [
         {
             "src": "/sitemap.xml",
-            "dest": "/api/sitemap"
+            "dest": "/api/sitemap.js"
         }
     ]
 }

@@ -1,8 +1,8 @@
 <script>
-    import Banner from './Banner';
-    import Button from './Button';
+    import Banner from './Banner.svelte';
+    import Button from './Button.svelte';
 
-    import { updateAvailable } from 'src/js/store';
+    import { updateAvailable } from '/src/js/store';
 </script>
 
 <Banner
@@ -29,9 +29,8 @@
     </span>
     <div slot="button">
         <Button
-            secondary
-            light
-            action={() => { location.reload() }}
+            on:click={() => { location.reload() }}
+            white
             label="Reloads the page"
         >
             Refresh

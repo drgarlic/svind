@@ -3,24 +3,16 @@ const tailwindUI = require('@tailwindcss/ui');
 
 module.exports = {
     purge: [
-        './public/index.html',
-        './src/**/*.svelte'
+        './index.html',
+        './src/**/*.js',
+        './src/**/*.svelte',
     ],
     theme: {
         extend: {
-            colors: {
-                coal: {
-                    '50': '#f9f9f9',
-                    '100': '#f7f7f7',
-                    '200': '#eaeaea',
-                    '300': '#dbdbdb',
-                    '400': '#b2b2b2',
-                    '500': '#7f7f7f',
-                    '600': '#636363',
-                    '700': '#515151',
-                    '800': '#3f3f3f',
-                    '900': '#2d2d2d',
-                }
+            borderRadius: {
+                xl: '1rem',
+                '2xl': '2rem',
+                '3xl': '4rem',
             },
             fontFamily: {
                 sans: [
@@ -46,9 +38,40 @@ module.exports = {
             }
         },
     },
+    variants: {
+        backgroundColor: [ 'responsive', 'hover', 'active', 'focus', 'focus-not-active', 'even', 'odd' ],
+        borderColor: [ 'responsive', 'hover', 'focus', 'active' ],
+        borderWidth: [ 'responsive', 'first', 'last', 'not-first', 'not-last' ],
+        margin: [ 'responsive', 'first', 'last', 'not-first', 'not-last' ],
+        textColor: [ 'responsive', 'hover', 'focus', 'active', 'focus-not-active' ],
+    },
     plugins: [
         tailwindUI({
             // layout: 'sidebar',
-        })
+        }),
+        function({ addVariant, e }) {
+            const variants = [
+                {
+                    name: 'not-first',
+                    rule: 'not(:first-child)',
+                },
+                {
+                    name: 'not-last',
+                    rule: 'not(:last-child)',
+                },
+                {
+                    name: 'focus-not-active',
+                    rule: 'focus:not(:active)',
+                }
+            ];
+
+            variants.forEach((variant) => {
+                addVariant(variant.name, ({ modifySelectors, separator }) => {
+                    modifySelectors(({ className }) => {
+                        return `${variant.parent ? `${variant.parent} ` : ''}.${e(`${variant.name}${separator}${className}`)}${variant.rule ? `:${variant.rule}` : ''}`;
+                    });
+                });
+            });
+        }
     ]
 };

@@ -1,4 +1,19 @@
 # ---
+# Cypress
+# ---
+
+cypress/fixtures
+cypress/integration/examples
+cypress/plugins
+cypress/support
+
+# ---
+# Local
+# ---
+
+*.local
+
+# ---
 # Mac OS
 # ---
 
@@ -12,19 +27,18 @@
 node_modules
 
 # ---
-# Now
+# Vercel
 # ---
 
-.now
+.vercel
 
 # ---
 # Production
 # ---
 
-public/tailwind.css
-public/build
+dist/
 public/favicons
-*.webp
+public/**/*.webp
 
 # ---
 # Yarn

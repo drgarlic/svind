@@ -1,6 +1,6 @@
 <script>
-    import Landing from 'src/templates/Landing';
-    import Button from 'src/components/Button';
+    import Landing from '/src/templates/Landing.svelte';
+    import Button from '/src/components/Button.svelte';
 
     const promise = (async () => {
         const res = await fetch('/api/date');
@@ -34,7 +34,8 @@
     ">
         <Button
             big
-            url="/"
+            href="/"
+            label="Go back to home"
         >
             Go back
         </Button>

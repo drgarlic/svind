@@ -1,7 +1,7 @@
 <script>
     import './js/sw';
-    import BannerUpdate from './components/BannerUpdate';
-    import Router from './Router';
+    import BannerUpdate from './components/BannerUpdate.svelte';
+    import Router from './Router.svelte';
 </script>
 
 <BannerUpdate />

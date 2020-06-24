@@ -2,12 +2,11 @@
 
 ## Description
 
-`svind` is a very simple PWA boilerplate that bundles `svelte`, `tailwind` and `now`.
-
-I tried to keep the boilerplate as simple as possible but with enough to be able to write code right away without having to take care of the boring things first.
+The Svind stack (Svelte, Vite, Vercel, Tailwind) brings a whole new DX. This boilerplate aims to bring this experience to you with everything already setup with a few extras (such as full PWA support with custom service worker).
 
 ## Goals
 
+- Vite with HMR
 - PWA
   - Notification prebuilt when a new version has been downloaded by the service worker
   - Icons and `manifest.json` automatically generated from configuration files and an image when building for production
@@ -25,20 +24,15 @@ I tried to keep the boilerplate as simple as possible but with enough to be able
 - CSS
   - Integrated Tailwind CSS
     - With dark/light mode support
-    - Custom `coal` color that is missing in the library
     - and a few other things
   - Purged and nano-tized when building for production
 - Router
   - Dynamic route import for code splitting
-- Rollup
-  - Easy imports with added `src` directory as path and `.svelte` extension to the extensions list
-  - Code splitting support
-  - Support for custom variables
 - Images
   - `webp` version of your images generated automatically
   - [Component](https://github.com/gawlk/svind/blob/master/src/components/Image.svelte) pre created to support both the original image and the `webp` version
   - Automatic image optimization when building for production
-- Now
+- Vercel
   - Example functions and integration
 - CI
   - Basic build test on push
@@ -48,5 +42,5 @@ I tried to keep the boilerplate as simple as possible but with enough to be able
 ```bash
 git clone https://github.com/gawlk/svind
 cd svind
-yarn install
+yarn
 ```

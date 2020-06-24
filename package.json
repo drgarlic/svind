@@ -12,43 +12,37 @@
   "main": "src/main.js",
   "license": "MIT",
   "dependencies": {
-    "sirv-cli": "^0.4.6"
+    "svelte": "^3.23.2",
+    "svelte-class-transition": "^1.0.3",
+    "svelte-spa-chunk": "^2.0.0",
+    "svelte-spa-router": "^2.2.0"
   },
   "devDependencies": {
-    "@rollup/plugin-alias": "^3.1.0",
-    "@rollup/plugin-commonjs": "^12.0.0",
-    "@rollup/plugin-node-resolve": "^8.0.0",
-    "@rollup/plugin-replace": "^2.3.2",
     "@tailwindcss/ui": "^0.3.0",
-    "autoprefixer": "^9.8.0",
+    "autoprefixer": "^9.8.3",
     "cssnano": "^4.1.10",
+    "cypress": "^4.9.0",
     "del": "^5.1.0",
     "favicons": "^6.1.0",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-inject": "^5.0.5",
     "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-string-replace": "^1.1.2",
     "gulp-webp": "^4.0.1",
-    "now": "^19.0.1",
-    "rollup": "^2.10.9",
-    "rollup-plugin-livereload": "^1.3.0",
-    "rollup-plugin-svelte": "^5.2.2",
-    "rollup-plugin-terser": "^6.1.0",
-    "sitemap": "^6.1.4",
-    "svelte": "^3.22.3",
-    "svelte-class-transition": "^1.0.0",
-    "svelte-spa-chunk": "^2.0.0",
-    "svelte-spa-router": "^2.1.0",
-    "tailwindcss": "^1.4.6"
-  },
-  "resolutions": {
-    "sharp": "^0.25.2"
+    "sirv-cli": "^1.0.1",
+    "sitemap": "^6.1.6",
+    "svelte-hmr": "^0.9.0",
+    "tailwindcss": "^1.4.6",
+    "vercel": "^19.1.1",
+    "vite": "1.0.0-beta.5",
+    "vite-plugin-svelte": "^1.2.1"
   },
   "scripts": {
-    "build": "rollup -c && NODE_ENV=production gulp prod",
-    "dev": "gulp && rollup -c -w",
+    "build": "gulp prod && vite build && gulp updateServiceWorker",
+    "dev": "gulp && vite",
     "prod": "yarn build && yarn start",
-    "start": "sirv public --host 0.0.0.0"
+    "start": "sirv dist --host 0.0.0.0 --port 3000"
   }
 }
