@@ -13,13 +13,13 @@
   "license": "MIT",
   "dependencies": {
     "svelte": "^3.23.2",
-    "svelte-class-transition": "^1.0.3",
+    "svelte-class-transition": "^1.0.4",
     "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.2.0"
   },
   "devDependencies": {
     "@tailwindcss/ui": "^0.3.0",
-    "autoprefixer": "^9.8.3",
+    "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
     "cypress": "^4.9.0",
     "del": "^5.1.0",
@@ -31,12 +31,12 @@
     "gulp-rename": "^2.0.0",
     "gulp-string-replace": "^1.1.2",
     "gulp-webp": "^4.0.1",
-    "sirv-cli": "^1.0.1",
+    "sirv-cli": "^1.0.2",
     "sitemap": "^6.1.6",
     "svelte-hmr": "^0.9.0",
     "tailwindcss": "^1.4.6",
     "vercel": "^19.1.1",
-    "vite": "1.0.0-beta.5",
+    "vite": "1.0.0-beta.8",
     "vite-plugin-svelte": "^1.2.1"
   },
   "scripts": {

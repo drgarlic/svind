@@ -34,6 +34,7 @@ The Svind stack (Svelte, Vite, Vercel, Tailwind) brings a whole new DX. This boi
   - Automatic image optimization when building for production
 - Vercel
   - Example functions and integration
+  - To make the dev mode work, you'll need to change the development command on your project page on https://vercel.com to `yarn dev --port $PORT`
 - CI
   - Basic build test on push
 
