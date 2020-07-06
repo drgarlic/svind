@@ -36,7 +36,7 @@
     "svelte-hmr": "^0.9.0",
     "tailwindcss": "^1.4.6",
     "vercel": "^19.1.1",
-    "vite": "1.0.0-beta.8",
+    "vite": "1.0.0-beta.11",
     "vite-plugin-svelte": "^1.2.1"
   },
   "scripts": {

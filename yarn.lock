@@ -8483,10 +8483,10 @@ vite-plugin-svelte@^1.2.1:
   dependencies:
     rollup-plugin-svelte "^5.2.3"
 
-vite@1.0.0-beta.8:
-  version "1.0.0-beta.8"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-1.0.0-beta.8.tgz#69828c5339675e4fc68b7eee0cdda60bd43d2406"
-  integrity sha512-OcDIRD8UsCvyxPT/Q1Cnm9B2fMNSzlfCyODVAxn+Pu7T8u8QB0ovJG2vTyyTwuc7dJ/eNSeMKtilwQqqvFzhWQ==
+vite@1.0.0-beta.11:
+  version "1.0.0-beta.11"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-1.0.0-beta.11.tgz#85c87549264d4b74a05da2c3eb1eb42fa8460197"
+  integrity sha512-etweuuPXgxwruCrcyj63fwpUlc6+HsE4n7uiOQ/fYEzjwOrUtEX4BuVAYcSkoxVA8qHS7zukG4LYzIozcD92Xw==
   dependencies:
     "@babel/parser" "^7.9.4"
     "@rollup/plugin-commonjs" "^13.0.0"
