@@ -18,7 +18,7 @@
     "svelte-spa-router": "^2.2.0"
   },
   "devDependencies": {
-    "@tailwindcss/ui": "^0.3.0",
+    "@tailwindcss/ui": "^0.3.1",
     "autoprefixer": "^9.8.4",
     "cssnano": "^4.1.10",
     "cypress": "^4.9.0",
