@@ -32,7 +32,7 @@
     "gulp-string-replace": "^1.1.2",
     "gulp-webp": "^4.0.1",
     "sirv-cli": "^1.0.2",
-    "sitemap": "^6.1.6",
+    "sitemap": "^6.2.0",
     "svelte-hmr": "^0.9.0",
     "tailwindcss": "^1.4.6",
     "vercel": "^19.1.1",
