@@ -7757,6 +7757,11 @@ svelte-class-transition@^1.0.4:
   resolved "https://registry.yarnpkg.com/svelte-class-transition/-/svelte-class-transition-1.0.4.tgz#dae7eb9cc45ff5fd429b187136e75c87ec4beeb5"
   integrity sha512-00Rs6Ft5V9v4aqHIZKZHY2/OUQjFSNBXtG53ped3SEyl0kYiOyXu/16Ro3xsKMyaU4/xppoL8ef5uPoSP+BNPw==
 
+svelte-hmr@^0.10.1:
+  version "0.10.1"
+  resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.10.1.tgz#19a8396b04107f0d34e633e2592a80374acf5b43"
+  integrity sha512-WRKVeR+iRsDzyM0nH+Q9TchnVV+WfeOoJNxqhnGuFmO01ZvnxDfWXD4UvbWdrtGUe/ijPK8erFqQMAHkNvPSww==
+
 svelte-hmr@^0.9.0:
   version "0.9.0"
   resolved "https://registry.yarnpkg.com/svelte-hmr/-/svelte-hmr-0.9.0.tgz#5e48b601b000b5b0767de0196068a547fcd99809"
@@ -8476,12 +8481,13 @@ vinyl@^2.0.0, vinyl@^2.2.0:
     remove-trailing-separator "^1.0.1"
     replace-ext "^1.0.0"
 
-vite-plugin-svelte@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/vite-plugin-svelte/-/vite-plugin-svelte-1.2.1.tgz#9d51f4a040e639ea9423852f3933a8cd43a3dbfd"
-  integrity sha512-X7KTjge/LxqdlEeZhA128+zBXzlyu8OgMQJTVwp+kgyBmWiqSweg4M5msU/akwcUbUHkMp4rgJcSoQoMzZ1L0w==
+vite-plugin-svelte@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/vite-plugin-svelte/-/vite-plugin-svelte-2.2.0.tgz#52291f96c5c444241ce104335264f2401b79a5ae"
+  integrity sha512-wZwH2Pc1GgbLjtgPMmPrxBUYoQQESmYdRx0/XKyXXdSRewxYUEDjm+ez9pT+RV/yqh+RlAjWZLAiOCYjo2uBMg==
   dependencies:
     rollup-plugin-svelte "^5.2.3"
+    svelte-hmr "^0.10.1"
 
 vite@1.0.0-beta.8:
   version "1.0.0-beta.8"
