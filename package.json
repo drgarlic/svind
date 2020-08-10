@@ -12,7 +12,7 @@
   "main": "src/main.js",
   "license": "MIT",
   "dependencies": {
-    "svelte": "^3.23.2",
+    "svelte": "^3.24.1",
     "svelte-class-transition": "^1.0.4",
     "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.2.0"
