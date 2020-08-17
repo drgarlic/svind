@@ -1,45 +1,45 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    import Transition from 'svelte-class-transition';
+    import { createEventDispatcher } from 'svelte'
+    import Transition from 'svelte-class-transition'
 
-    import Button from './Button.svelte';
+    import Button from './Button.svelte'
 
-    export let toggle;
-    export let label;
+    export let toggle
+    export let label
 
-    let button;
-    let dropdown;
+    let button
+    let dropdown
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
-    let position = '-right-22 origin-center';
+    let position = '-right-22 origin-center'
 
     // $: {
     //     if (button) {
-    //         const bb = button.getBoundingClientRect();
-    //         const center = (bb.left + bb.right) / 2;
+    //         const bb = button.getBoundingClientRect()
+    //         const center = (bb.left + bb.right) / 2
 
     //         if (bb.left = )
-    //         position = 'origin-top-right right-0';
-    //         position = '-right-22 origin-center';
+    //         position = 'origin-top-right right-0'
+    //         position = '-right-22 origin-center'
     //     }
     // }
 
     const onClickOutside = (event) => {
         if (toggle) {
-            const x = event.clientX;
-            const y = event.clientY;
+            const x = event.clientX
+            const y = event.clientY
 
-            const bb = button.getBoundingClientRect();
-            const bd = dropdown.getBoundingClientRect();
+            const bb = button.getBoundingClientRect()
+            const bd = dropdown.getBoundingClientRect()
 
-            const between = (low, value, high) => value >= low && value <= high;
+            const between = (low, value, high) => value >= low && value <= high
 
             if (
                 ! (between(bb.left, x, bb.right) && between(bb.top, y, bb.bottom))
                 && ! (between(bd.left, x, bd.right) && between(bd.top, y, bd.bottom))
             ) {
-                dispatch('update', { value: false });
+                dispatch('update', { value: false })
             }
         }
     }
@@ -54,7 +54,7 @@
 ">
     <div bind:this={button}>
         <Button
-            on:click={() => { dispatch('update', { value: ! toggle }); }}
+            on:click={() => { dispatch('update', { value: ! toggle }) }}
             active={toggle}
             tertiary
             {label}

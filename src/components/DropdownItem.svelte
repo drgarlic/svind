@@ -1,7 +1,7 @@
 <script>
-    export let onClick;
-    export let text;
-    export let onClickBis = undefined;
+    export let onClick
+    export let text
+    export let onClickBis = undefined
 </script>
 
 <div class="

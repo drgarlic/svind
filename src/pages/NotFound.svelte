@@ -1,7 +1,7 @@
 <script>
-    import Landing from '/src/templates/Landing.svelte';
-    import Button from '/src/components/Button.svelte';
-    import Image from '/src/components/Image.svelte';
+    import Landing from '/src/templates/Landing.svelte'
+    import Button from '/src/components/Button.svelte'
+    import Image from '/src/components/Image.svelte'
 </script>
 
 <Landing>

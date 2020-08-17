@@ -1,13 +1,4 @@
 # ---
-# Cypress
-# ---
-
-cypress/fixtures
-cypress/integration/examples
-cypress/plugins
-cypress/support
-
-# ---
 # Local
 # ---
 
@@ -37,7 +28,6 @@ node_modules
 # ---
 
 dist/
-public/favicons
 public/**/*.webp
 
 # ---

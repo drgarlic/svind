@@ -1,5 +1,5 @@
-import path from 'path';
-import svelte from 'vite-plugin-svelte';
+import path from 'path'
+import svelte from 'vite-plugin-svelte'
 
 let config = {
 	alias: {
@@ -14,8 +14,11 @@ let config = {
         ],
         exclude: [
             'svelte-spa-chunk',
-        ]
+        ],
+        rollupDedupe: [
+            'svelte'
+        ],
     },
-};
+}
 
-export default config;
+export default config

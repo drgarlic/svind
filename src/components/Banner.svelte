@@ -1,12 +1,12 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
-    import Transition from 'svelte-class-transition';
+    import { createEventDispatcher } from 'svelte'
+    import Transition from 'svelte-class-transition'
 
-    export let hasButton;
-    export let hasIcon;
-    export let toggle;
+    export let hasButton
+    export let hasIcon
+    export let toggle
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 </script>
 
 <Transition

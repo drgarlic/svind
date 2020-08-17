@@ -1,10 +1,10 @@
 <script>
-    import Transition from 'svelte-class-transition';
+    import Transition from 'svelte-class-transition'
 
-    export let toggle;
-    export let positionAbsolute = false;
-    export let noBackground = false;
-    export let full = false;
+    export let toggle
+    export let positionAbsolute = false
+    export let noBackground = false
+    export let full = false
 </script>
 
 <Transition

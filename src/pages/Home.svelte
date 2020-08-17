@@ -1,10 +1,10 @@
 <script>
-    import Landing from '/src/templates/Landing.svelte';
-    import Button from '/src/components/Button.svelte';
+    import Landing from '/src/templates/Landing.svelte'
+    import Button from '/src/components/Button.svelte'
 
     import {
         updateAvailable,
-    } from '/src/js/store';
+    } from '/src/js/store'
 </script>
 
 <Landing>

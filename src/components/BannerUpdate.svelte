@@ -1,8 +1,8 @@
 <script>
-    import Banner from './Banner.svelte';
-    import Button from './Button.svelte';
+    import Banner from './Banner.svelte'
+    import Button from './Button.svelte'
 
-    import { updateAvailable } from '/src/js/store';
+    import { updateAvailable } from '/src/js/store'
 </script>
 
 <Banner

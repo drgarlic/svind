@@ -1,12 +1,12 @@
 <script>
-    import Landing from '/src/templates/Landing.svelte';
-    import Button from '/src/components/Button.svelte';
+    import Landing from '/src/templates/Landing.svelte'
+    import Button from '/src/components/Button.svelte'
 
     const promise = (async () => {
-        const res = await fetch('/api/date');
-        const date = await res.json();
-        return date;
-    })();
+        const res = await fetch('/api/date')
+        const date = await res.json()
+        return date
+    })()
 </script>
 
 <Landing>

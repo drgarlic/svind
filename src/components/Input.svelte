@@ -1,15 +1,15 @@
 <script>
-    import { createEventDispatcher } from 'svelte';
+    import { createEventDispatcher } from 'svelte'
 
-    export let value;
-    export let label = undefined;
-    export let id = undefined;
-    export let placeholder;
-    export let type = undefined;
+    export let value
+    export let label = undefined
+    export let id = undefined
+    export let placeholder
+    export let type = undefined
 
-    let lines;
+    let lines
 
-    const dispatch = createEventDispatcher();
+    const dispatch = createEventDispatcher()
 
     const classes = `
         form-input
@@ -25,7 +25,7 @@
         focus:shadow-outline-gray
         sm:text-sm
         sm:leading-5
-    `;
+    `
 </script>
 
 <div class="

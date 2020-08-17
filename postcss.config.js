@@ -1,6 +1,6 @@
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const tailwindcss = require('tailwindcss');
+const autoprefixer = require('autoprefixer')
+const cssnano = require('cssnano')
+const tailwindcss = require('tailwindcss')
 
 module.exports = {
     plugins: [
@@ -10,4 +10,4 @@ module.exports = {
             preset: 'default',
         })
     ]
-};
+}

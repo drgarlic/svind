@@ -1,13 +1,13 @@
 <script>
-    let _class = '';
-    export { _class as class };
+    let _class = ''
+    export { _class as class }
 
-    export let src;
-    export let alt = 'Alt';
+    export let src
+    export let alt = 'Alt'
 
-    $: path = 'images/' + src;
-    $: extension = path.split('.').pop();
-    $: pathWithoutExtension = path.substr(0, path.length - extension.length);
+    $: path = 'images/' + src
+    $: extension = path.split('.').pop()
+    $: pathWithoutExtension = path.substr(0, path.length - extension.length)
 </script>
 
 <picture>

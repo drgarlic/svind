@@ -1,7 +1,7 @@
 <script>
-    export let href;
-    export let label;
-    export let blank = true;
+    export let href
+    export let label
+    export let blank = true
 </script>
 
 <a
