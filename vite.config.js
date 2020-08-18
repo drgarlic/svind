@@ -1,12 +1,18 @@
 import path from 'path'
-import svelte from 'vite-plugin-svelte'
+import svite from 'svite'
+
+const sviteConfig = {
+    hot: true,
+    useTransformCache: true,
+    svelte: {},
+}
 
 let config = {
 	alias: {
 		'/src/': path.resolve(__dirname, './src'),
     },
     plugins: [
-        svelte(),
+        svite(sviteConfig),
     ],
 	optimizeDeps: {
         include: [
@@ -14,9 +20,6 @@ let config = {
         ],
         exclude: [
             'svelte-spa-chunk',
-        ],
-        rollupDedupe: [
-            'svelte'
         ],
     },
 }

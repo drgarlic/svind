@@ -14,6 +14,7 @@
   "dependencies": {
     "svelte": "^3.24.1",
     "svelte-class-transition": "^1.0.4",
+    "svelte-hmr": "^0.10.2",
     "svelte-spa-chunk": "^2.0.0",
     "svelte-spa-router": "^2.2.0"
   },
@@ -32,15 +33,13 @@
     "gulp-webp": "^4.0.1",
     "sirv-cli": "^1.0.6",
     "sitemap": "^6.2.0",
-    "svelte-hmr": "^0.10.2",
+    "svite": "^0.5.0",
     "tailwindcss": "^1.6.2",
-    "vercel": "^19.2.0",
-    "vite": "1.0.0-rc.4",
-    "vite-plugin-svelte": "^2.4.0"
+    "vercel": "^19.2.0"
   },
   "scripts": {
-    "build": "gulp clean && vite build && gulp prod",
-    "dev": "gulp && vite",
+    "build": "gulp clean && svite build && gulp prod",
+    "dev": "gulp && svite",
     "prod": "yarn build && yarn start",
     "start": "sirv dist --host 0.0.0.0 --port 3000"
   }
