@@ -3,7 +3,7 @@ import svite from 'svite'
 
 const sviteConfig = {
     hot: true,
-    useTransformCache: true,
+    useTransformCache: false, // default is true, but HMR is broken then
     svelte: {},
 }
 
