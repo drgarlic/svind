@@ -2,11 +2,23 @@ const defaultTheme = require('tailwindcss/defaultTheme')
 const tailwindUI = require('@tailwindcss/ui')
 
 module.exports = {
-    purge: [
-        './index.html',
-        './src/**/*.js',
-        './src/**/*.svelte',
-    ],
+    purge: {
+        mode: 'all',
+        content: [
+            './index.html',
+            './src/**/*.html',
+            './src/**/*.js',
+            './src/**/*.jsx',
+            './src/**/*.svelte',
+            './src/**/*.ts',
+            './src/**/*.tsx',
+            './src/**/*.vue',
+        ],
+    },
+    future: {
+        removeDeprecatedGapUtilities: true,
+    },
+    experimental: 'all',
     theme: {
         extend: {
             fontFamily: {
@@ -23,21 +35,31 @@ module.exports = {
                     raw: '(prefers-color-scheme: light)',
                 },
             },
+            inset: {
+                '-15': '-3.75rem',
+                '2': '0.5rem',
+            },
             zIndex: {
                 '-10': '-10',
-            }
+            },
         },
     },
     plugins: [
-        tailwindUI({
-            // layout: 'sidebar',
-        }),
+        tailwindUI({}),
         function({ addVariant, e }) {
             const variants = [
                 {
                     name: 'focus-not-active',
                     rule: 'focus:not(:active)',
-                }
+                },
+                {
+                    name: 'not-first',
+                    css: 'not(:first-child)',
+                },
+                {
+                    name: 'not-last',
+                    css: 'not(:last-child)',
+                },
             ]
 
             variants.forEach((variant) => {
