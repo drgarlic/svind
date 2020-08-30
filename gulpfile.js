@@ -102,7 +102,7 @@ exports.cleanFaviconsHTML = cleanFaviconsHTML
 const optimizeImages = () => {
     return gulp.src('dist/**/*.+(jpeg|jpg|png|gif)')
         .pipe(imagemin())
-        .pipe(gulp.dest('public'))
+        .pipe(gulp.dest('dist'))
 }
 exports.optimizeImages = optimizeImages
 
