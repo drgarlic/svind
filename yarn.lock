@@ -431,18 +431,6 @@
     is-module "^1.0.0"
     resolve "^1.17.0"
 
-"@rollup/plugin-node-resolve@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@rollup/plugin-node-resolve/-/plugin-node-resolve-9.0.0.tgz#39bd0034ce9126b39c1699695f440b4b7d2b62e6"
-  integrity sha512-gPz+utFHLRrd41WMP13Jq5mqqzHL3OXrfj3/MkSyB6UBIcuNt9j60GCbarzMzdf1VHFpOxfQh/ez7wyadLMqkg==
-  dependencies:
-    "@rollup/pluginutils" "^3.1.0"
-    "@types/resolve" "1.17.1"
-    builtin-modules "^3.1.0"
-    deepmerge "^4.2.2"
-    is-module "^1.0.0"
-    resolve "^1.17.0"
-
 "@rollup/pluginutils@^3.0.8", "@rollup/pluginutils@^3.0.9", "@rollup/pluginutils@^3.1.0":
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/@rollup/pluginutils/-/pluginutils-3.1.0.tgz#706b4524ee6dc8b103b3c995533e5ad680c02b9b"
@@ -7484,10 +7472,10 @@ svelte-loadable@^1.4.0:
   resolved "https://registry.yarnpkg.com/svelte-loadable/-/svelte-loadable-1.5.0.tgz#98176b2e62a46eb456a882a310951250e37fb2bf"
   integrity sha512-ZuDIpPA8SZaJ2UgSe97ZN0Ft67WmUGl2ZcbdibVQJQgA7HlEje2pYEMRT3z4AuBRUPW5rTJA0zCFnB6nuNGkZw==
 
-svelte-preprocess@4.0.12:
-  version "4.0.12"
-  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.0.12.tgz#39d1d179258288f496ac06e3db7afcd94d17b4d2"
-  integrity sha512-nAzVj5M98YzxdoDh9F9NuIaGMn8kjf8SnjRB2IduZIRYjrS5qkrGeHR2ba+CnOUOlMTZ/rQ2jpGeCwnyjgqr5Q==
+svelte-preprocess@4.1.1:
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/svelte-preprocess/-/svelte-preprocess-4.1.1.tgz#25e22b2acf45a82f66d480c57b8bacf1aeaaffda"
+  integrity sha512-fCnq15SY0MYd70as0z0IcdtU6a6m0RTFdWViWSdV7styI/yp6SVkMinpFR7GbQJR3StzZ/9FEmroSiYYzc3VZA==
   dependencies:
     "@types/pug" "^2.0.4"
     "@types/sass" "^1.16.0"
@@ -7540,12 +7528,11 @@ svgo@^1.3.2:
     unquote "~1.1.1"
     util.promisify "~1.0.0"
 
-svite@^0.5.0:
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/svite/-/svite-0.5.0.tgz#ecd24902a0156b6a54cfb3c65ac2a6902a679e70"
-  integrity sha512-BBTiaJXreUpqKgvHyMojGquxXNh3VaYJakhpWXQNyUtopUtdeNOb6rZ6nRYdKzZJZxu3ntPidGeQtQ9kJh2TOw==
+svite@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/svite/-/svite-0.6.0.tgz#e4e262d190eeb281ed2dd07344d84c97b0683fb5"
+  integrity sha512-KlHe61W5pX7jqnNgEpuIwlXkGwc7S5u8hpygPcLXRYKPv4iCdR+38bXsNcMf5jfvlgKSlfv74tGutG43Lta8ww==
   dependencies:
-    "@rollup/plugin-node-resolve" "^9.0.0"
     "@rollup/pluginutils" "^4.0.0"
     chalk "^4.1.0"
     commander "^6.0.0"
@@ -7557,7 +7544,7 @@ svite@^0.5.0:
     vite "1.0.0-rc.4"
   optionalDependencies:
     rollup-plugin-visualizer "^4.0.4"
-    svelte-preprocess "4.0.12"
+    svelte-preprocess "4.1.1"
 
 tailwindcss@^1.7.3:
   version "1.7.3"
