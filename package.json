@@ -34,7 +34,7 @@
     "sitemap": "^6.2.0",
     "svite": "^0.6.0",
     "tailwindcss": "^1.7.6",
-    "vercel": "^20.0.0"
+    "vercel": "^20.1.0"
   },
   "scripts": {
     "build": "gulp clean && svite build && gulp prod",
