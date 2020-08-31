@@ -32,7 +32,7 @@
     "gulp-webp": "^4.0.1",
     "sirv-cli": "^1.0.6",
     "sitemap": "^6.2.0",
-    "svite": "^0.5.0",
+    "svite": "^0.6.0",
     "tailwindcss": "^1.7.3",
     "vercel": "^20.0.0"
   },
