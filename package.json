@@ -19,7 +19,7 @@
     "svelte-spa-router": "^3.0.1"
   },
   "devDependencies": {
-    "@tailwindcss/ui": "^0.6.0",
+    "@tailwindcss/ui": "^0.6.2",
     "autoprefixer": "^9.8.6",
     "del": "^5.1.0",
     "favicons": "^6.2.0",
