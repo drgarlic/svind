@@ -16,7 +16,7 @@
     "svelte-class-transition": "^1.0.4",
     "svelte-hmr": "^0.10.2",
     "svelte-spa-chunk": "^2.0.0",
-    "svelte-spa-router": "^3.0.1"
+    "svelte-spa-router": "^3.0.2"
   },
   "devDependencies": {
     "@tailwindcss/ui": "^0.6.2",
