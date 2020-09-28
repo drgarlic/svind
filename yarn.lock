@@ -674,20 +674,20 @@
     "@types/express-serve-static-core" "*"
     "@types/mime" "*"
 
-"@vercel/build-utils@2.5.1":
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.5.1.tgz#2f687c2d82464dd85e0ed8130bc01e5dac9b11a4"
-  integrity sha512-689ov8fGrgVnLwPbJUvgUKdSTseZiOMobR4XoZjmSmeF8+gaOpycsdGuVFzNtdFneUiQWO/k5AkY5diZj8fNgg==
+"@vercel/build-utils@2.5.3":
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/@vercel/build-utils/-/build-utils-2.5.3.tgz#2f935105c1b9378df4408dc7b638879b06e7442e"
+  integrity sha512-jsvfTLbduwVuexC8LPO58z2qByEhlb8469s2mZQUkCjLxkX1DzW66QB7N68ymzd8rBPAg5n2hi4Zc5NxLHDXLw==
 
 "@vercel/go@1.1.6":
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/@vercel/go/-/go-1.1.6.tgz#45ac3a6bd98a15b8bf1028b8c141a51fd971ac15"
   integrity sha512-swA2crS08fkPmw4UkR9yjmoL8FOCzuNHLFDqj8oM1V9ni610ibJ7Xk57jI8uyS7bTecQVh8VUxihb+SF0GT+aw==
 
-"@vercel/node@1.8.1":
-  version "1.8.1"
-  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.8.1.tgz#aa0a04f425638874d19be64f7905018ef6f9b1c5"
-  integrity sha512-vQsYMrulghMaHEKbqxJCQPfHrGEBmYmQMLYrx+m8kolKDq1LQDWFx2MRh4DyMnGfYSoYoW5PI2HP7NAfbEjzmg==
+"@vercel/node@1.8.3":
+  version "1.8.3"
+  resolved "https://registry.yarnpkg.com/@vercel/node/-/node-1.8.3.tgz#3fcf06d8405a8e1f08987578888eabba9f34c48b"
+  integrity sha512-NTRoQJBQTCT1erz9+hg/juHI9Yz5UpwBuR+O9qNZMFjlqU2913BkeZSNb9FAGcNKks/wK9usktRReys3cATLzg==
   dependencies:
     "@types/node" "*"
     ts-node "8.9.1"
@@ -8127,14 +8127,14 @@ vary@^1.1.2, vary@~1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vercel@^20.1.0:
-  version "20.1.0"
-  resolved "https://registry.yarnpkg.com/vercel/-/vercel-20.1.0.tgz#366c39892455f5fff9b1d31db6e6ac1dff436453"
-  integrity sha512-fOYq2X6o157hOBbyxU9VcM2pCHa6cAxvkA731N9FEw8MyMnPC7zJRgFQ/kYJ0oisjlKsmm2A1ryrLEz3KLIDFw==
+vercel@^20.1.1:
+  version "20.1.1"
+  resolved "https://registry.yarnpkg.com/vercel/-/vercel-20.1.1.tgz#4be4176f65e69033f06352667326c97edc68057f"
+  integrity sha512-YsemhAUKAVT1WRX/LqvdRoNJLrycVwvvF4sednS36DRZmkiKKf7sTj5sOyCxEAYDyvBfuzokKz+wbZmn4+fCeg==
   dependencies:
-    "@vercel/build-utils" "2.5.1"
+    "@vercel/build-utils" "2.5.3"
     "@vercel/go" "1.1.6"
-    "@vercel/node" "1.8.1"
+    "@vercel/node" "1.8.3"
     "@vercel/python" "1.2.3"
     "@vercel/ruby" "1.2.4"
     update-notifier "4.1.0"
