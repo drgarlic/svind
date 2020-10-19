@@ -33,7 +33,7 @@
     "sirv-cli": "^1.0.8",
     "sitemap": "^6.3.2",
     "svite": "^0.6.0",
-    "tailwindcss": "^1.8.13",
+    "tailwindcss": "^1.9.5",
     "vercel": "^20.1.2"
   },
   "scripts": {
