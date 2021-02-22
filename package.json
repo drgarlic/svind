@@ -22,7 +22,7 @@
     "@tailwindcss/ui": "^0.7.2",
     "autoprefixer": "^9.8.6",
     "del": "^6.0.0",
-    "favicons": "^6.2.0",
+    "favicons": "^6.2.1",
     "gulp": "^4.0.2",
     "gulp-imagemin": "^7.1.0",
     "gulp-inject": "^5.0.5",
